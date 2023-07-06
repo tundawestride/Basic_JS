@@ -100,24 +100,24 @@
 
 // This is function calculate BMI
 
-function BMIrate(w, h) {
+// function BMIrate(w, h) {
 
-    let result = ((w / (h * h)) * 10000);
+//     let result = ((w / (h * h)) * 10000);
 
-    if (result >= 30) { (rate = 'Fat'); }
-    else if (result >= 25) { (rate = 'Overweight'); }
-    else if (result >= 18.5) { (rate = 'Normal'); }
-    else { (rate = 'Thin'); }
+//     if (result >= 30) { (rate = 'Fat'); }
+//     else if (result >= 25) { (rate = 'Overweight'); }
+//     else if (result >= 18.5) { (rate = 'Normal'); }
+//     else { (rate = 'Thin'); }
 
-    return (rate); // This is answer of this function
+//     return (rate); // This is answer of this function
 
-}
+// }
 
-let Case1 = BMIrate(80, 140);
-let Case2 = BMIrate(40, 170);
+// let Case1 = BMIrate(80, 140);
+// let Case2 = BMIrate(40, 170);
 
-console.log(Case1)
-console.log(Case2)
+// console.log(Case1)
+// console.log(Case2)
 
 //============================================
 
@@ -155,4 +155,81 @@ console.log(Case2)
 // console.log('Your grade is ' + grade) // This is for prompt
 
 //============================================
+
+console.log('CHALLENGE Question 1')
+
+function addition(x1, x2) {
+    return (x1 + x2);
+}
+
+let addition1 = addition(3, 2);
+let addition2 = addition(-3, -6);
+let addition3 = addition(7, 3);
+
+console.log(addition1)
+console.log(addition2)
+console.log(addition3)
+
+//============================================
+
+console.log('CHALLENGE Question 2')
+
+function convert(n) {
+    return (n * 60);
+}
+
+let convert1 = convert(5)
+let convert2 = convert(3)
+let convert3 = convert(2)
+
+console.log('5 minutes = ' + convert1 + ' seconds')
+console.log('5 minutes = ' + convert2 + ' seconds')
+console.log('5 minutes = ' + convert3 + ' seconds')
+
+//============================================
+
+console.log('CHALLENGE Question 3')
+
+function findPerimeter(x, y) {
+    let result = x + y;
+    return (result) * 2
+}
+
+console.log('Perimeter1 = ' + (findPerimeter(6, 7)))
+console.log('Perimeter2 = ' + (findPerimeter(20, 10)))
+console.log('Perimeter3 = ' + (findPerimeter(2, 9)))
+
+//============================================
+
+console.log('CHALLENGE Question 4')
+
+function checkDivide(x, y) {
+    let i = x % y;
+
+    if (i === 0) { result = 'true' }
+    else { result = 'false' };
+
+    return result;
+
+}
+
+console.log(checkDivide(5, 1))
+console.log(checkDivide(6, 3))
+console.log(checkDivide(10, 3))
+
+//============================================
+
+console.log('CHALLENGE Question 5')
+
+function calcAge(i) {
+    return i * 365
+}
+
+console.log(' 65 Years Old time on earth = ' + calcAge(65) + ' Days')
+console.log(' 0 Years Old time on earth = ' + calcAge(0) + ' Days')
+console.log(' 20 Years Old time on earth = ' + calcAge(20) + ' Days')
+
+//============================================
+
+
 

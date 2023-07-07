@@ -27,8 +27,8 @@ let convert2 = convert(3)
 let convert3 = convert(2)
 
 console.log('5 minutes = ' + convert1 + ' seconds')
-console.log('5 minutes = ' + convert2 + ' seconds')
-console.log('5 minutes = ' + convert3 + ' seconds')
+console.log('3 minutes = ' + convert2 + ' seconds')
+console.log('2 minutes = ' + convert3 + ' seconds')
 
 //============================================
 
@@ -48,12 +48,14 @@ console.log('Perimeter3 = ' + (findPerimeter(2, 9)))
 console.log('CHALLENGE Question 4')
 
 function checkDivide(x, y) {
-    let i = x % y;
+    // let i = x % y;
 
-    if (i === 0) { result = 'true' }
-    else { result = 'false' };
+    // if (i === 0) { result = 'true' }
+    // else { result = 'false' };
 
-    return result;
+    // return result;
+
+    return x % y === 0; // === is a compare operations
 
 }
 
@@ -72,5 +74,21 @@ function calcAge(i) {
 console.log(' 65 Years Old time on earth = ' + calcAge(65) + ' Days')
 console.log(' 0 Years Old time on earth = ' + calcAge(0) + ' Days')
 console.log(' 20 Years Old time on earth = ' + calcAge(20) + ' Days')
+
+//============================================
+
+console.log('CHALLENGE Question 6')
+
+
+function footballPoints(x, y, z) {
+    let wins = 3; let draws = 1; let losses = 0;
+    let total = (x * wins) + (y * draws) + (z * losses);
+
+    return total
+}
+
+console.log('Total Points 1 = ' + footballPoints(3, 4, 2))
+console.log('Total Points 2 = ' + footballPoints(5, 0, 2))
+console.log('Total Points 3 = ' + footballPoints(0, 0, 1))
 
 //============================================

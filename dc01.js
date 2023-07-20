@@ -16,16 +16,22 @@ displaycolorbt.addEventListener('click', (display) => {
 }
 )
 
-document.getElementsByClassName("message").innerHTML = "This is message"
 
-let displaymessage = document.querySelector(".message")
-let displaymessagebt = document.querySelector(".displaym")
 
-displaymessagebt.addEventListener('click', (display) => {
+let displaymessage = document.getElementById("message")
+let displaymessagebt = document.getElementById("displaym")
+
+displaymessagebt.addEventListener('click', () => {
     console.log(displaymessage.style.color);
 
     if (displaymessage.style.display === "none") {
+
+        displaymessage.innerHTML = "This is message"
+
         displaymessage.style.display = "block"
+
+        console.log(document.getElementsByClassName("message")[0])
+
     } else {
         displaymessage.style.display = "none"
     }

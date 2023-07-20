@@ -1,0 +1,29 @@
+#topic {
+    background-color: aqua;
+}
+
+#displayc {
+    background-color: lightcyan
+}
+
+#displaym {
+    background-color: bisque
+}
+
+.resultsection {
+    display: block;
+}
+
+.color {
+    background-color: coral;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.message {
+    background-color: hotpink;
+    width: auto;
+    height: 50px;
+    display: none;
+}

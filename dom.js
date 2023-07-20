@@ -58,6 +58,7 @@ function currentTime() {
 
     document.getElementById("clock").innerHTML = time
 
+    //setTimeout continue 
     let t = setTimeout(function () {
         currentTime()
     }, 1000)

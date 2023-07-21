@@ -2,6 +2,7 @@ document.getElementById("topic").innerHTML = "This is Click and Display practice
 
 
 let displaycolor = document.querySelector(".color")
+// main #id .class better to specific
 let displaycolorbt = document.querySelector(".displayc")
 
 displaycolorbt.addEventListener('click', (display) => {
@@ -27,10 +28,9 @@ displaymessagebt.addEventListener('click', () => {
     if (displaymessage.style.display === "none") {
 
         displaymessage.innerHTML = "This is message"
-
         displaymessage.style.display = "block"
 
-        console.log(document.getElementsByClassName("message")[0])
+        console.log(document.getElementsByClassName("message")[0]) // class using in string
 
     } else {
         displaymessage.style.display = "none"

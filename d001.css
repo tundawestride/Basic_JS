@@ -24,6 +24,12 @@
     width: 50px;
     height: 50px;
     margin: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.colorchoice button:hover {
+    cursor: pointer;
 }
 
 .addto,
@@ -46,6 +52,30 @@
 
 }
 
+.addto:hover {
+    cursor: pointer;
+}
+
 .buynow {
     background-color: limegreen;
+}
+
+.buynow:hover {
+    cursor: pointer;
+}
+
+#color1 {
+    background-color: #23211f;
+}
+
+#color2 {
+    background-color: #ca3d22;
+}
+
+#color3 {
+    background-color: #565681;
+}
+
+#color4 {
+    background-color: #e9c7be;
 }

@@ -43,3 +43,7 @@ body {
     font-size: 25px;
     font-weight: bolder;
 }
+
+.watchcontent span {
+    font-size: 12px;
+}

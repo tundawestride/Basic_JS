@@ -80,3 +80,4 @@ function onValidate() {
 
     document.getElementById("result").innerHTML = result
 }
+

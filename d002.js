@@ -19,7 +19,7 @@ function timer() {
     if (ss < 10) { ss = "0" + ss } else { ss = ss };
 
     let time = hh + ":" + mm + ":" + ss + " " + session
-    let myInterval = setInterval(timer, 1000);
+    const myInterval = setInterval(timer, 1000);
 
     document.getElementById("watchtime").innerHTML = time
 }
@@ -33,30 +33,43 @@ function currentDate() {
     let year = b.getUTCFullYear();
 
     let today = date + " / " + month + " / " + year
-    // let myInterval = setInterval(date, 1000); Need or not??
+    const myInterval = setInterval(currentDate, 1000);
 
     document.getElementById("watchdate").innerHTML = today
 }
 console.log(currentDate())
 
+//===================================================
 
-let startbutton = document.querySelector(".stopwatchbt")
-let displaytimer = document.querySelector(".dptimer")
+stopwatchfunction = function starttimer() {
+
+    let everyonesecond = document.getElementById("oneseconds").innerHTML = "test"
+    let everytenmillisecs = document.getElementById("tenmillisecs").innerHTML = "test"
+
+
+}
+
+
+
+//===================================================
+
+let startbutton = document.getElementById("stopwatchbt")
 
 startbutton.addEventListener('click', () => {
 
-    function stopwatchfuction() {
-
-    }
-
     if (startbutton.innerHTML === "Start") {
         startbutton.innerHTML = "Stop";
-        console.log()
+        console.log(stopwatchfunction())
+
     } else {
         startbutton.innerHTML = "Start";
-        console.log()
+        everyonesecond = document.getElementById("oneseconds").innerHTML = "00"
+        everytenmillisecs = document.getElementById("tenmillisecs").innerHTML = "00"
+
     }
 }
 )
+
+
 
 

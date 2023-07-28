@@ -17,13 +17,14 @@
                 <div class="watchdate" id="watchdate">Date xx Month xx Year</div>
                 <div class="watchtime" id="watchtime">hh:mm:ss+session</div>
 
-                <div>STOP WATCH</div>
-                <div><span id="oneseconds">00</span>:<span id="tenmillisecs">00</span></div>
+                <div class="stopwatchdisplay">STOP WATCH
+                    <div>Last round time <span id="showsecs">00</span>:<span id="showmils">00</span></div>
+                    <div>Round <span id="countround">0</span></div>
+                    <div>Total time <span id="oneseconds">00</span>:<span id="tenmillisecs">00</span></div>
 
-                <button class="startwatchbt" id="startwatchbt">Start</button>
-                <!-- <button class="startwatchbt" id="startwatchbt">Stop</button> -->
-                <button class="stopwatchbtreset" id="stopwatchbtreset">Reset</button>
-
+                    <button class="startwatchbt" id="startwatchbt">Start</button>
+                    <button class="stopwatchbtreset" id="stopwatchbtreset">Reset</button>
+                </div>
             </div>
         </div>
 

@@ -37,15 +37,18 @@ function currentDate() {
 }
 currentDate()
 
+
+//Stopwatch run section
 let everyonesecond = document.getElementById("oneseconds")
 let everytenmillisecs = document.getElementById("tenmillisecs")
+let showlastsecs = document.getElementById("showsecs")
+let showlastmils = document.getElementById("showmils")
 
 let task
 let secs = 0;
 let mils = 0;
 
 function starttimer() {
-
     task = setInterval(() => {
         mils++
         everytenmillisecs.innerHTML = mils < 10 ? "0" + mils : mils
@@ -60,21 +63,75 @@ function starttimer() {
 
 }
 
+let taskl
+let secsl = 0;
+let milsl = 0;
+
+function laststarttimer() {
+    taskl = setInterval(() => {
+        milsl++
+        showlastmils.innerHTML = milsl < 10 ? "0" + milsl : milsl
+
+        if (milsl == 99) {
+            secsl++
+            showlastsecs.innerHTML = secsl < 10 ? "0" + secsl : secsl
+            milsl = 0
+        }
+
+    }, 10)
+
+}
+
+//Count round section
+let countinground = document.getElementById("countround")
+
+let round = 0
+
+function countingaround() {
+    round++
+    countinground.innerHTML = round
+}
+
+
+//Controlling and monitoring section
 let startbutton = document.getElementById("startwatchbt")
 
 startbutton.addEventListener('click', () => {
 
-
     if (startbutton.innerHTML === "Start") {
         startbutton.innerHTML = "Stop";
+        showlastsecs.innerHTML = secsl = 0;
+        showlastmils.innerHTML = milsl = 0;
         starttimer()
+        laststarttimer()
 
     } else {
         startbutton.innerHTML = "Start";
         clearInterval(task)
-
+        clearInterval(taskl)
+        showlastsecs.innerHTML = secsl < 10 ? "0" + secsl : secsl
+        showlastmils.innerHTML = milsl < 10 ? "0" + milsl : milsl
+        countingaround()
     }
 }
 )
 
 
+//Reset section
+let resetbutton = document.getElementById("stopwatchbtreset")
+
+resetbutton.addEventListener('click', () => {
+    everyonesecond.innerHTML = secs = "0" + 0;
+    everytenmillisecs.innerHTML = mils = "0" + 0;
+    showlastsecs.innerHTML = secsl = "0" + 0;
+    showlastmils.innerHTML = milsl = "0" + 0;
+    countinground.innerHTML = "0";
+    clearInterval(task)
+    clearInterval(taskl)
+    round = 0;
+
+    if (startbutton.innerHTML === "Stop") {
+        startbutton.innerHTML = "Start"
+    }
+
+})

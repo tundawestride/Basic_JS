@@ -45,28 +45,28 @@
 
 // ======================
 
-// let age = 50; let sex = "Female";
+let age = 50; let sex = "Female";
 
-// if ((age <= 20) && (sex === "male")) {
-//     console.log("You are young man");
-// } else if ((age >= 20) && (sex === "male")) {
-//     console.log("You are adult man");
-// } else {
-//     console.log("Who are you")
-// }
+if ((age <= 20) && (sex === "male")) {
+    console.log("You are young man");
+} else if ((age >= 20) && (sex === "male")) {
+    console.log("You are adult man");
+} else {
+    console.log("Who are you")
+}
 
 // ======================
 
 //IF - ELSE Statement
 
-// let score = 15
-// if (score >= 80) { grade = 'A'; }
-// else if (score >= 70) { grade = 'B'; }
-// else if (score >= 60) { grade = 'C'; }
-// else if (score >= 50) { grade = 'D'; }
-// else { grade = 'F'; }
+let score = 15
+if (score >= 80) { grade = 'A'; }
+else if (score >= 70) { grade = 'B'; }
+else if (score >= 60) { grade = 'C'; }
+else if (score >= 50) { grade = 'D'; }
+else { grade = 'F'; }
 
-// console.log("your grade is", grade)
+console.log("your grade is", grade)
 
 // ======================
 

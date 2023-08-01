@@ -20,23 +20,32 @@ function timer() {
 }
 timer()
 
+// WatchPresent
+
 let myInterval2
 
 function currentDate() {
     clearInterval(myInterval2)
 
     let b = new Date();
+
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let day = weekday[b.getDay()]
+
     let date = b.getUTCDate();
-    let month = b.getUTCMonth();
+
+    const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    let month = monthName[b.getUTCMonth()]
+
     let year = b.getUTCFullYear();
 
-    let today = date + " / " + month + " / " + year
+    let today = day + "  " + date + " / " + month + " / " + year
     myInterval2 = setInterval(currentDate, 1000);
 
     document.getElementById("watchdate").innerHTML = today
+
 }
 currentDate()
-
 
 //Stopwatch run section
 let everyonesecond = document.getElementById("oneseconds")

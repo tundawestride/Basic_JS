@@ -3,7 +3,7 @@ let text = "   Hello World   ";
 console.log(text.trim());
 
 let movie_name = "Spiderman no way home";
-//split
+//split and return string
 console.log(movie_name.split(" "));
 console.log(movie_name.split(" ")[1]);
 

@@ -9,52 +9,128 @@
 </head>
 
 <body>
-    <div>
-        <div class="cardsection">
 
-            <div class="frontcard">
-                <div class="banknameandlogo">
-                    <div id="showbankname">Bank Name</div>
-                    <div class="logocard">Logo Here</div>
-                </div>
-                <div class="microchip"><span class="arrow"></span><span class="chipimg"></span></div>
-                <div id="showcardnumber">0000 0000 0000 0000</div>
-                <div class="validinfo"><span class="validt">VALID DATE </span><span id="showvaliddate">00/00</span>
-                </div>
-                <div class="nameandcardtype">
-                    <div id="showownername">Owner Name</div>
-                    <div class="cardtype1"></div>
-                    <div class="cardtype2"></div>
-                </div>
+
+    <div class="cardsection">
+
+        <div class="frontcard">
+
+            <div class="banknameandlogo">
+                <!-- destination 1 -->
+                <div class="showbankname" id="showbankname">Bank Name</div>
+                <div class="logocard">Logo Here</div>
             </div>
 
-            <div class="backcard">
-                <div class="blacktab"></div>
-                <div class="cvcinfo"><span class="greytab"></span><span id="showsecuritycode">000</span></div>
+            <div class="microchip">
+                <img class="arrow" src="https://cdn.pixabay.com/photo/2013/03/29/13/39/previous-97613_1280.png" alt="">
+                <img class="chipimg" src="https://img.icons8.com/fluency/344/sim-card-chip.png" alt="">
             </div>
+            <!-- destination 2 -->
+            <div class="showcardnumber" id="showcardnumber">0000 0000 0000 0000</div>
+
+            <div class="validinfo">
+                <span class="validt">VALID DATE </span>
+                <!-- destination 3 -->
+                <span id="showvaliddate">00/00</span>
+            </div>
+
+            <div class="nameandcardtype">
+                <!-- destination 4 -->
+                <div id="showownername">Owner Name</div>
+            </div>
+
+            <div class="cardtypeimage">
+                <div class="cardtype1"></div>
+                <div class="cardtype2"></div>
+            </div>
+        </div>
+
+
+        <div class="backcard">
+
+            <div class="blacktab"></div>
+
+            <div class="cvcinfo">
+                <div class="greytab">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <!-- destination 5 -->
+                <div class="showsecuritycode" id="showsecuritycode">000</div>
+
+            </div>
+
             <div class="textconditions">222
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit repellat nesciunt libero
                 tempora voluptatem, est quidem, quis nulla ducimus at architecto consequatur illo laborum. Quod
                 distinctio et mollitia voluptates perferendis eligendi Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit.</div>
-
         </div>
+
+    </div>
+
+    <div class="formcontainer">
 
         <div class="formsection">
 
-            <div class="ownernamet">Owner Name</div>
-            <div id="fillownername"></div>
-            <div class="banknamet">Bank Name</div>
-            <div id="fillbankname"></div>
-            <div class="cardnumbert">Card Number</div>
-            <div id="fillcardnumber"></div>
-            <div class="mmyyt">MM/YY</div>
-            <div id="fillvaliddate"></div>
-            <div class="cvccodet">CVC Code</div>
-            <div id="fillsecuritycode"></div>
-            <div id="paybutton" class="paybutton">PAY NOW</div>
+            <div class="inputform">
+                <!-- input origin 4 -->
+                <label>Owner Name</label>
+                <input class="inputhere" id="fillownername" type="text">
+            </div>
+
+            <div class="inputform">
+                <!-- input origin 1 -->
+                <label>Bank Name</label>
+                <input class="inputhere" id="fillbanknam" type="text">
+            </div>
+
+            <div class="inputform">
+                <!-- input origin 2 -->
+                <label>Card Number</label>
+                <input class="inputhere" id="fillcardnumbe" type="text">
+            </div>
+
+            <div class="halfform">
+
+                <div class="inputformhalf">
+                    <!-- input origin 3 -->
+                    <label>MM/YY</label>
+                    <input class="inputhere" id="fillvaliddate" type="text">
+                </div>
+
+                <div class="inputformhalf">
+                    <!-- input origin 5 -->
+                    <label class="cvc">CVC Code</label>
+                    <input class="inputhere" id="fillsecuritycode" type="text">
+                </div>
+            </div>
 
         </div>
+    </div>
+
+    <div class="buttonsection">
+
+        <button class="paybutton" id="paybutton">PAY NOW
+
+    </div>
+
+
 
     </div>
 

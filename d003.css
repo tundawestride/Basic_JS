@@ -1,5 +1,9 @@
+* {
+    margin: 0%
+}
+
 .cardsection {
-    background-color: darkseagreen;
+    background-color: #d8d8d8;
     gap: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -7,12 +11,6 @@
     align-items: center;
     padding-top: 25px;
 }
-
-.formsection {
-    background-color: lightpink;
-}
-
-
 
 .frontcard {
     background-color: blue;
@@ -25,6 +23,9 @@
     border: solid 0.5px rgb(165, 165, 165);
     color: white;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .backcard {
@@ -38,13 +39,231 @@
     border: solid 0.5px rgb(165, 165, 165);
     color: white;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
-
+    position: relative;
 }
 
 .banknameandlogo {
     display: flex;
-    background-color: #50bdfc;
     flex-direction: row;
     justify-content: space-between;
-    margin: 8px;
+    margin: 14px;
+    padding-top: 8px;
+}
+
+.logocard {
+    color: rgb(255, 255, 186);
+}
+
+.showbankname {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logocard {
+    font-size: 15px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.microchip {
+    display: block;
+    margin-left: 8px;
+    position: absolute;
+    top: 25%;
+}
+
+.arrow {
+    width: 35px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.chipimg {
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+}
+
+.showcardnumber {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.validinfo {
+    text-align: center;
+    position: absolute;
+    top: 63%;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.validt {
+    color: rgb(255, 255, 186);
+}
+
+.nameandcardtype {
+    position: absolute;
+    top: 72%;
+    left: 5%;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.cardtypeimage {
+    background-color: white;
+}
+
+.cardtype1 {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 52px;
+    bottom: 7%;
+    position: absolute;
+    z-index: 2;
+}
+
+.cardtype2 {
+    background-color: #ef991a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 30px;
+    bottom: 7%;
+    position: absolute;
+    z-index: 1;
+}
+
+.backcard {
+    overflow: hidden;
+}
+
+.blacktab {
+    width: 100%;
+    height: 35px;
+    background-color: black;
+    margin-top: 25px;
+    left: 0.5%;
+    position: absolute;
+}
+
+.cvcinfo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    background-color: #fff;
+    width: 85%;
+    height: 20px;
+    padding: 5px;
+
+
+}
+
+.greytab {
+    display: block;
+    width: 85%;
+    height: 30px;
+    background: #ffffff;
+    position: absolute;
+    left: 0%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.greytab hr {
+    color: #bababa;
+}
+
+.showsecuritycode {
+    color: #b53636;
+    text-shadow: 1 0px 3px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.textconditions {
+    font-size: 8.5px;
+    position: absolute;
+    top: 55%;
+    margin: 2px;
+    padding: 2%;
+}
+
+.formcontainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    background-color: #d8d8d8;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+.formsection {
+    width: 360px;
+    background-color: #d8d8d8;
+}
+
+.inputform label {
+    color: #797979;
+}
+
+.formsection .inputform input {
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    color: #b53636;
+    border: none;
+    border-bottom: 1px solid #a3a3a3;
+    line-height: 2.35rem;
+    font-size: 1.3rem;
+}
+
+.halfform {
+    display: inline-flex;
+    width: 100%;
+    gap: 15px;
+    color: #797979;
+}
+
+.formsection .inputformhalf input {
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    color: #b53636;
+    border: none;
+    border-bottom: 1px solid #a3a3a3;
+    line-height: 2.35rem;
+    font-size: 1.3rem;
+}
+
+.buttonsection {
+    display: flex;
+    justify-content: center;
+    background-color: #d8d8d8;
+    padding-bottom: 50px;
+}
+
+.paybutton {
+    color: white;
+    background-color: #3997cd;
+    border: none;
+    border-radius: 7px;
+    width: 360px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.paybutton:hover {
+    cursor: pointer;
 }

@@ -31,8 +31,6 @@ typesecuritycode.addEventListener('input', (d) => {
 
 //Try Array and String method to help with this conditions fields.
 
-let numcredit = ["01", "  ", "02", "  ", "03", "  ", "04"]
-console.log(numcredit)
 
 let cardnumberdisplay = document.getElementById("showcardnumber")
 let fillcardnumber = document.getElementById("fillcardnumber")
@@ -40,8 +38,23 @@ let fillcardnumber = document.getElementById("fillcardnumber")
 function trytextandspace1() {
     fillcardnumber.addEventListener('input', (e) => {
         let group1 = (e).target.value
-        cardnumberdisplay.textContent = group1.split("") + numcredit[1]
+        //console.log(e)
+        let result = []
 
+        for (let index = 0; index < group1.length; index++) {
+            const element = group1[index];
+
+            // 0 1 2 3 4 5 6 อยากให้เริ่มที่ 1 ก็ 0+1 
+            if ((index + 1) % 4 === 0) {
+                result.push(element + " ")
+            }
+            else {
+                result.push(element)
+            }
+        }
+        console.log(result)
+        cardnumberdisplay.textContent = result.join("")
     })
 }
 trytextandspace1()
+

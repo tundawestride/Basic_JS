@@ -27,34 +27,29 @@ typesecuritycode.addEventListener('input', (d) => {
 }
 )
 
-
-
 //Try Array and String method to help with this conditions fields.
-
 
 let cardnumberdisplay = document.getElementById("showcardnumber")
 let fillcardnumber = document.getElementById("fillcardnumber")
 
-function trytextandspace1() {
+function fillcn() {
     fillcardnumber.addEventListener('input', (e) => {
-        let group1 = (e).target.value
-        //console.log(e)
+        let numberfield = (e).target.value
         let result = []
 
-        for (let index = 0; index < group1.length; index++) {
-            const element = group1[index];
+        for (let index = 0; index < numberfield.length; index++) {
+            const alldigits = numberfield[index];
 
-            // 0 1 2 3 4 5 6 อยากให้เริ่มที่ 1 ก็ 0+1 
             if ((index + 1) % 4 === 0) {
-                result.push(element + " ")
-            }
-            else {
-                result.push(element)
-            }
+                result.push(alldigits + " ")
+            } else { result.push(alldigits) }
         }
         console.log(result)
+
         cardnumberdisplay.textContent = result.join("")
-    })
+    }
+    )
 }
-trytextandspace1()
+fillcn()
+
 

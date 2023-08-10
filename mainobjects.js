@@ -13,10 +13,10 @@ console.log(student2);
 console.log(student2.name);
 console.log(student2['age']);
 
-// let name = student.name
-// let age = student.age
-// let major = student.major
-// let gpa = student.GPA
+// // let name = student.name
+// // let age = student.age
+// // let major = student.major
+// // let gpa = student.GPA
 let { name, age, major, GPA } = student
 console.log(name, age, major, GPA);
 

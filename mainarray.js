@@ -29,43 +29,58 @@ console.log(arr);
 let arr1 = ["shark", ...arr, "crocodile"]
 let arr2 = ["shark", "crocodile", ...arr]
 let arr3 = arr2.join(arr) // connect array and return string not really recommend
+let arr4 = arr2.join(" ")
 
-console.log(arr2);
+console.log(arr4);
+console.log(arr4.length)
 
-// Slice
-let slicrStart = arr.slice(1, 4) // count by length and cut the last position out
-console.log(slicrStart);
+//========================================== Return Max value of words.
 
-let sliceEnd = arr.slice(-5, -1) //
-console.log(sliceEnd);
+console.log("=====Practice join array=====")
+let word1 = ["Red"]
+let word2 = ["Yellow"]
+let word3 = ["Blue"]
 
-// // indexOf = is finding position
-console.log(arr.indexOf("bird"));
+let allword = word1 + " " + word2 + " " + word3
+console.log(allword)
 
-// //sort
-let sortArr = [5, 9, 7, 4, 1, 3, 2]
-console.log(sortArr.sort())
+//Please check math max https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_max
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_max2
 
-// loop for array
+// // Slice
+// let slicrStart = arr.slice(1, 4) // count by length and cut the last position out
+// console.log(slicrStart);
 
-// let arr = ["tiger", "lion", "bird", "fish", "cat"]
-// index      0        1       2      3       4
-// length = 5
-console.log('arr 2 = ' + arr[2]);
+// let sliceEnd = arr.slice(-5, -1) //
+// console.log(sliceEnd);
 
-//for loop example
+// // // indexOf = is finding position
+// console.log(arr.indexOf("bird"));
 
-for (let i = 0; i < arr.length; i++) { // can using index or i, any dummy
+// // //sort
+// let sortArr = [5, 9, 7, 4, 1, 3, 2]
+// console.log(sortArr.sort())
 
-    const element = arr[i];
-    console.log(arr[i]);
-}
+// // loop for array
 
-//while loop example
+// // let arr = ["tiger", "lion", "bird", "fish", "cat"]
+// // index      0        1       2      3       4
+// // length = 5
+// console.log('arr 2 = ' + arr[2]);
 
-let number = 0;
-while (number < 3) {
-    number = number + 1
-    console.log(number);
-}
+// //for loop example
+
+// for (let i = 0; i < arr.length; i++) { // can using index or i, any dummy
+
+//     const element = arr[i];
+//     console.log(arr[i]);
+// }
+
+// //while loop example
+
+// let number = 0;
+// while (number < 3) {
+//     number = number + 1
+//     console.log(number);
+// }
 

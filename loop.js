@@ -142,7 +142,9 @@
 // let i = 0; let count = 5; let total = 0;
 
 // for (i = 0; i < count; i++) {
+//     console.log(i)
 //     total = total + (2 * i);
+//     console.log(total)
 // }
 
 // console.log('result =' + total);
@@ -278,14 +280,75 @@
 //===========================================
 
 
-let i = 1; let n = 100; let total = 0
+// let i = 1; let n = 100; let total = 0
 
-for (i = 1; i <= n; i++) {
-    total = i * i;
-    console.log("i =" + i);
-    console.log("n =" + n);
-    console.log("total =" + total);
+// for (i = 1; i <= n; i++) {
+//     total = i * i;
+//     console.log("i =" + i);
+//     console.log("n =" + n);
+//     console.log("total =" + total);
 
-}
+// }
+
+//===========================================
+
+// function Examplefactorial(x) {
+//     // If num = 0 OR num = 1, the factorial will return 1
+//     if (x === 0 || x === 1) return 1;
+
+//     // We start the FOR loop with i = 4
+//     // We decrement i after each iteration
+//     for (let y = x - 1; y >= 1; y--) {
+//         // console.log(y)
+
+//         x = x * y;
+//         // We store the value of num at each iteration
+//         // console.log(x)
+
+//     }
+//     return x;
+//     // Example factorial(5) Start from 5 and minus
+//     //                        Declare      Conditions     Process
+//     //  num                  var y = x - 1    y >= 1 ?      y--      x *= y (x = x * y)
+//     // 1st iteration: 5      4 = 5 - 1         yes          3        20 = 5 * 4
+//     // 2nd iteration: 20     3 = 4 - 1         yes          2        60 = 20 * 3
+//     // 3rd iteration: 60     2 = 3 - 1         yes          1       120 = 60 * 2
+//     // 4th iteration: 120    1 = 2 - 1         no           0       120 = 120 * 1
+//     // 5th iteration: 120        0                                      120
+//     // End of the FOR loop
+// }
+
+// console.log(Examplefactorial(5))
+// console.log(Examplefactorial(4))
+// console.log(Examplefactorial(3))
+
+//===========================================
+
+// function testminus(i) {
+//     for (let q = i - 1; q >= 1; q--) {
+//         // console.log(i)
+//         console.log(q)
+//     }
+// }
+// testminus(7)  // Start from  i - 1 [ 7 - 1 = 6,...,1 ]
+
+//===========================================
+
+// function factorial(x) {
+//     if (x === 1 || x === 0) return 1;
+//     for (let y = x - 1; y > 0; y--) {
+//         x = x * y
+//         // Explanation
+//         //  fac     x-1 = [y]     y > 0 ?   [y--]     (x=4 or [x] = x * y )
+//         //  1st     4-1 = [3]       Yes     [3]       4 * 3 = [12]  // Storage for loop
+//         //  2st     3-1 = [2]       Yes     [2]       [12] * 2 = [24]
+//         //  3st     2-1 = [1]       Yes     [1]       [24] * 1 = [24]
+//         //  4st     1-1 = [0]       No      [0]       Stop
+//     }
+//     return x
+// }
+// console.log(factorial(3))
+// console.log(factorial(4))
+// console.log(factorial(5))
 
 //===========================================

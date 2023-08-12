@@ -156,3 +156,14 @@
 
 //============================================
 
+let n = 0
+let m = 5
+
+function factorial() {
+    for (let n = 0; n < m; n++) {
+        let o = n + 1
+        console.log(o)
+    }
+}
+
+factorial()

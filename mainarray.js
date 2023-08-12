@@ -34,53 +34,102 @@ let arr4 = arr2.join(" ")
 console.log(arr4);
 console.log(arr4.length)
 
-//========================================== Return Max value of words.
+// //========================================== Return Max value of words.
 
-console.log("=====Practice join array=====")
-let word1 = ["Red"]
-let word2 = ["Yellow"]
-let word3 = ["Blue"]
+// console.log("=====Practice join array=====")
+// let word1 = ["I"]
+// let word2 = ["a", "m"]
+// let word3 = ["g", "o", "i", "n", "g"]
+// let word4 = ["t", "o"]
+// let word5 = ["t", "h", "e"]
+// let word6 = ["m", "u", "s", "e", "u", "m"]
 
-let allword = word1 + " " + word2 + " " + word3
-console.log(allword)
+// // console.log(word1)
+// // console.log(word2)
+// // console.log(word3)
 
-//Please check math max https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_max
-//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_max2
+// let word10 = word1.join("")
+// let word20 = word2.join("")
+// let word30 = word3.join("")
+// let word40 = word4.join("")
+// let word50 = word5.join("")
+// let word60 = word6.join("")
 
-// // Slice
-// let slicrStart = arr.slice(1, 4) // count by length and cut the last position out
-// console.log(slicrStart);
+// // console.log(word10)
+// // console.log(word20)
+// // console.log(word30)
 
-// let sliceEnd = arr.slice(-5, -1) //
-// console.log(sliceEnd);
+// let word1length = word10.length
+// let word2length = word20.length
+// let word3length = word30.length
+// let word4length = word40.length
+// let word5length = word50.length
+// let word6length = word60.length
 
-// // // indexOf = is finding position
-// console.log(arr.indexOf("bird"));
+// // console.log(word1length)
+// // console.log(word2length)
+// // console.log(word3length)
 
-// // //sort
-// let sortArr = [5, 9, 7, 4, 1, 3, 2]
-// console.log(sortArr.sort())
+// let sentence = "'" + word10 + " " + word20 + " " + word30 + " " + word40 + " " + word50 + " " + word60 + "'"
+// console.log(sentence)
 
-// // loop for array
 
-// // let arr = ["tiger", "lion", "bird", "fish", "cat"]
-// // index      0        1       2      3       4
-// // length = 5
-// console.log('arr 2 = ' + arr[2]);
-
-// //for loop example
-
-// for (let i = 0; i < arr.length; i++) { // can using index or i, any dummy
-
-//     const element = arr[i];
-//     console.log(arr[i]);
+// function longestWord() {
+//     let themost = Math.max(word1length, word2length, word3length, word4length, word5length, word6length)
+//     // console.log(themost)
+//     if (themost === word1length) {
+//         console.log("The Longest Word is " + word10)
+//     } else if (themost === word2length) {
+//         console.log("The Longest Word is " + word20)
+//     } else if (themost === word3length) {
+//         console.log("The Longest Word is " + word30)
+//     } else if (themost === word4length) {
+//         console.log("The Longest Word is " + word40)
+//     } else if (themost === word5length) {
+//         console.log("The Longest Word is " + word50)
+//     } else if (themost === word6length) {
+//         console.log("The Longest Word is " + word60)
+//     }
 // }
+// longestWord()
 
-// //while loop example
+// //==========================================
 
-// let number = 0;
-// while (number < 3) {
-//     number = number + 1
-//     console.log(number);
-// }
+
+// Slice
+let slicrStart = arr.slice(1, 4) // count by length and cut the last position out
+console.log(slicrStart);
+
+let sliceEnd = arr.slice(-5, -1) //
+console.log(sliceEnd);
+
+// // indexOf = is finding position
+console.log(arr.indexOf("bird"));
+
+// //sort
+let sortArr = [5, 9, 7, 4, 1, 3, 2]
+console.log(sortArr.sort())
+
+// loop for array
+
+// let arr = ["tiger", "lion", "bird", "fish", "cat"]
+// index      0        1       2      3       4
+// length = 5
+console.log('arr 2 = ' + arr[2]);
+
+//for loop example
+
+for (let i = 0; i < arr.length; i++) { // can using index or i, any dummy
+
+    const element = arr[i];
+    console.log(arr[i]);
+}
+
+//while loop example
+
+let number = 0;
+while (number < 3) {
+    number = number + 1
+    console.log(number);
+}
 

@@ -63,3 +63,22 @@ function factorial(x) {
 console.log(factorial(3))
 console.log(factorial(4))
 console.log(factorial(5))
+
+console.log("=====ROTATE ARRAY=====")
+
+function rotatearr(nums, i) {
+    i = i % nums.length; // Divide the [remainder], to fix not pop more than array length
+    // console.log(nums, i)
+    for (let n = 0; n < i; n++) { // to fix not pop more than [array length] or [remainder]
+        const x = nums.pop();
+        nums.unshift(x)
+    }
+    return nums;
+}
+console.log([1, 2, 3, 4, 5], 1)
+console.log(rotatearr([1, 2, 3, 4, 5], 1))
+console.log([3, 2, 1], 2)
+console.log(rotatearr([3, 2, 1], 2))
+console.log([4, 5, 6, 7], 3)
+console.log(rotatearr([4, 5, 6, 7], 3))
+

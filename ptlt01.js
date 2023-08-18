@@ -71,14 +71,33 @@ function rotatearr(nums, i) {
     // console.log(nums, i)
     for (let n = 0; n < i; n++) { // to fix not pop more than [array length] or [remainder]
         const x = nums.pop();
+        console.log(x)
         nums.unshift(x)
     }
     return nums;
 }
-console.log([1, 2, 3, 4, 5], 1)
-console.log(rotatearr([1, 2, 3, 4, 5], 1))
+console.log([1, 2, 3, 4, 5], 1) // Q 
+console.log(rotatearr([1, 2, 3, 4, 5], 1)) // A
 console.log([3, 2, 1], 2)
 console.log(rotatearr([3, 2, 1], 2))
 console.log([4, 5, 6, 7], 3)
 console.log(rotatearr([4, 5, 6, 7], 3))
 
+console.log("=====FIND MISSING NUMBER?=====")
+
+console.log("...In process...")
+
+console.log("=====REMOVE DUPLICATES=====")
+
+let arr1 = ([9, 0, 0, 3, 3, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8])
+let arr2 = ["21", "22", "23", "30", "45", "45", "65"]
+
+function removedup(arr) {
+    // return [...new Set(arr)];
+    return [...new Set(arr)]
+}
+
+console.log(arr1)
+console.log("Remove duplicates = " + (removedup(arr1)))
+console.log(arr2)
+console.log("Remove duplicates = " + (removedup(arr2)))

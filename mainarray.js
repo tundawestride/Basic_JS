@@ -133,7 +133,7 @@
 //     console.log(number);
 // }
 
-// //======Rotate array======
+// //===============================
 //               0    1    2    3    4    5
 // let arr00 = ["1", "2", "3", "4", "5", "6"]
 // console.log(arr00)
@@ -174,7 +174,6 @@
 
 // console.log(arr01splicereverse + "," + arr01getunsplice)
 
-//https://betterprogramming.pub/3-ways-to-rotate-an-array-2a45b39f7bec
 
 //============================================
 
@@ -203,44 +202,129 @@
 
 
 //============================================
-//          0  1  2  3  4
-let nums = [1, 2, 3, 4, 5]
-let numss = [3, 2, 1]
-let numsss = [4, 5, 6, 7]
+// //          0  1  2  3  4
+// let nums = [1, 2, 3, 4, 5]
+// let numss = [3, 2, 1]
+// let numsss = [4, 5, 6, 7]
 
-function rotatearr(nums, i) {
-    i = i % nums.length; // we want to set i equal to i % nums.length คือห้ามหมุนมากกว่า จำนวนความยาวอาเรย์ ถ้าใส่จำนวนครั้งที่หมุนมากกว่า จำนวนความยาวอาเรย์จะทำการ หารออกและปัดเศษ เหลือเศษเท่าไหร่ก็หมุนเท่านั้น 
-    // console.log(nums.length)
-    console.log(nums, i)
-    for (let n = 0; n < i; n++) {
-        const x = nums.pop();
-        nums.unshift(x)
-    }
-    return nums;
+// function rotatearr(nums, i) {
+//     i = i % nums.length; // we want to set i equal to i % nums.length คือห้ามหมุนมากกว่า จำนวนความยาวอาเรย์ ถ้าใส่จำนวนครั้งที่หมุนมากกว่า จำนวนความยาวอาเรย์จะทำการ หารออกและปัดเศษ เหลือเศษเท่าไหร่ก็หมุนเท่านั้น
+//     // console.log(nums.length)
+//     console.log(nums, i)
+//     for (let n = 0; n < i; n++) {
+//         const x = nums.pop();
+//         nums.unshift(x)
+//     }
+//     return nums;
 
+// }
+// console.log(rotatearr(nums, 1)) //
+// // i = 2 / 5 = เศษ 2 ดังนั้น i = 2
+// // let n = 0; 0 < [i=3] ; n++)
+// // แปลว่าเงื่อนไขจะทำต่อในกรณีเป็น n < 2 เพื่อป้องกันการหมุนมากกว่าจำนวน nums.length
+// //           n       n < 2   n++
+// //    1st    0        Yes     1
+// //    2st    1        Yes     2
+// //    3st    2        No      -
+// //   ทำการหมุน                2 รอบ
+// //  const x = nums.pop();    2 รอบ (คือให้ทำการ delete array ด้านหลังออกทีละ 1 ดึงออกมาเก็บไว้)
+// //  [1, 2, 3, 4, 5] pop     4, 5
+// //  nums.unshift(x)         4, 5 Add Front
+// //  return nums; = 4,5 ต่อด้านหน้า 1, 2, 3
+// //  [ 4, 5, 1, 2, 3 ]
+// console.log(rotatearr(numss, 2))
+// console.log(rotatearr(numsss, 3))
+
+//================Practice Missing number============================
+
+//====This is sort===
+// let arrsq = [3, 6, 7, 8, 2, 1]
+// let sortarr = arrsq.sort()
+// console.log(sortarr)
+
+//===This is Matchs===
+// let allarr = [1, 2, 4, 6, 5]
+
+// function findMatchsnumber() {
+//     for (let i = 0; i < allarr.length; i++) {
+//         // console.log(i)
+//         console.log(i + 1)
+//         console.log(allarr[i])
+//         if (i + 1 === allarr[i]) {
+//             console.log("Match")
+//         } else { console.log("Unmatch") }
+//     }
+// }
+// findMatchsnumber(allarr)
+
+//=============Practice find missing number
+
+
+// function findmatchsandsequence(arr) {
+//     console.log("Input arr = " + arr)
+
+//     let arrsort = arr.sort()
+//     console.log("Sort arr = " + arrsort)
+
+//     console.log("Check if each Sorted arr - reference = 0?")
+//     for (let a = 0; a < arr.length; a++) {
+//         b = a + 1
+//         console.log("arr sorted " + arr[a] + " - reference " + b + " = 0? ")
+
+//         if (arr[a] - b === 0) {
+//             console.log("yes")
+//         } else {
+//             console.log("No, The correct is " + b)
+//         }
+//     }
+
+// }
+
+// findmatchsandsequence([1, 7, 3, 5, 6, 2])
+
+//https://www.geeksforgeeks.org/find-the-missing-number/
+// Javascript code to implement the approach
+// Function to find the missing number
+
+// function findMissing(arr, N) {
+//     let i;
+//     let temp = [];
+//     for (i = 0; i <= N; i++) {
+//         temp[i] = 0;
+//         console.log(" temp[i] = " + temp[i])
+//     }
+
+//     for (i = 0; i < N; i++) {
+//         temp[arr[i] - 1] = 1;
+//         console.log(" temp[arr[i] - 1] = " + temp[arr[i] - 1])
+//     }
+
+//     let ans = 0;
+//     for (i = 0; i <= N; i++) {
+//         // console.log(i)
+//         if (temp[i] == 0)
+//             ans = i + 1;
+//     }
+//     console.log(ans);
+// }
+
+// // Driver code
+// let arr = [1, 3, 7, 5, 6, 2];
+// let n = arr.length;
+
+// // Function call
+// findMissing(arr, n);
+
+//======================Remove Duplicates=====================
+
+let arr1 = ([9, 0, 0, 3, 3, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8])
+let arr2 = ["1", "2", "2", "3", "4", "4", "5"]
+
+function removedup(arr) {
+    // return [...new Set(arr)];
+    return [...new Set(arr)]
 }
-console.log(rotatearr(nums, 1)) //
-// i = 2 / 5 = เศษ 2 ดังนั้น i = 2
-// let n = 0; 0 < [i=3] ; n++)
-// แปลว่าเงื่อนไขจะทำต่อในกรณีเป็น n < 2 เพื่อป้องกันการหมุนมากกว่าจำนวน nums.length
-//           n       n < 2   n++
-//    1st    0        Yes     1
-//    2st    1        Yes     2
-//    3st    2        No      -
-//   ทำการหมุน                2 รอบ
-//  const x = nums.pop();    2 รอบ (คือให้ทำการ delete array ด้านหลังออกทีละ 1 ดึงออกมาเก็บไว้)
-//  [1, 2, 3, 4, 5] pop     4, 5
-//  nums.unshift(x)         4, 5 Add Front
-//  return nums; = 4,5 ต่อด้านหน้า 1, 2, 3
-//  [ 4, 5, 1, 2, 3 ]
-console.log(rotatearr(numss, 2))
-console.log(rotatearr(numsss, 3))
 
-//============================================
-
-
-
-
-
-
+console.log(removedup(arr1))
+console.log(removedup(arr2))
 

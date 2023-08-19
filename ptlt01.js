@@ -71,7 +71,7 @@ function rotatearr(nums, i) {
     // console.log(nums, i)
     for (let n = 0; n < i; n++) { // to fix not pop more than [array length] or [remainder]
         const x = nums.pop();
-        console.log(x)
+        // console.log(x)
         nums.unshift(x)
     }
     return nums;
@@ -85,7 +85,25 @@ console.log(rotatearr([4, 5, 6, 7], 3))
 
 console.log("=====FIND MISSING NUMBER?=====")
 
-console.log("...In process...")
+function findmissingnumber(arr) {
+    console.log(arr)
+
+    let maxarr = Math.max(...arr)
+    let minarr = Math.min(...arr)
+
+    result = []
+
+    for (let i = minarr; i <= maxarr; i++) {
+        // console.log(i)
+        if (!arr.includes(i)) {
+            result.push(i)
+        }
+    }
+    console.log("missing number is")
+    return console.log(result)
+}
+findmissingnumber([2, 1, 3, 7, 6])
+findmissingnumber([8, 1, 3])
 
 console.log("=====REMOVE DUPLICATES=====")
 

@@ -259,7 +259,6 @@
 
 //=============Practice find missing number
 
-
 // function findmatchsandsequence(arr) {
 //     console.log("Input arr = " + arr)
 
@@ -279,52 +278,48 @@
 //     }
 
 // }
-
 // findmatchsandsequence([1, 7, 3, 5, 6, 2])
 
-//https://www.geeksforgeeks.org/find-the-missing-number/
-// Javascript code to implement the approach
-// Function to find the missing number
+//=====findmissingnumber=====
 
-// function findMissing(arr, N) {
-//     let i;
-//     let temp = [];
-//     for (i = 0; i <= N; i++) {
-//         temp[i] = 0;
-//         console.log(" temp[i] = " + temp[i])
-//     }
+// let arr = [2, 1, 3, 7, 6] // missing is 4,5
+// วนลูปตั้งแต่ 1 - 7 for loop
+// ถ้า item แต่ละรอบ ไม่อยู่ใน Array ที่รับมา ให้ Push ค่าใน Result if arr.include(item) เป็นการเช็คว่ามีค่าไหม !arr.include(item) เป็นการเช็คว่าถ้าไม่มีแล้วจะต้องการให้ return เป็นอะไร ใช้ for, if 
 
-//     for (i = 0; i < N; i++) {
-//         temp[arr[i] - 1] = 1;
-//         console.log(" temp[arr[i] - 1] = " + temp[arr[i] - 1])
-//     }
+function findmissingnumber(arr) {
+    console.log(arr)
 
-//     let ans = 0;
-//     for (i = 0; i <= N; i++) {
-//         // console.log(i)
-//         if (temp[i] == 0)
-//             ans = i + 1;
-//     }
-//     console.log(ans);
+    let maxarr = Math.max(...arr)
+    // console.log(maxarr)
+    let minarr = Math.min(...arr)
+    // console.log(minarr)
+
+    result = []
+
+    for (let i = minarr; i <= maxarr; i++) {
+        // console.log(i)
+        if (!arr.includes(i)) {
+            result.push(i)
+        }
+    }
+    console.log("missing number is")
+    return console.log(result)
+}
+findmissingnumber([2, 1, 3, 7, 6])
+findmissingnumber([8, 1, 3])
+
+
+// ======================Remove Duplicates=====================
+
+// let arr1 = ([9, 0, 0, 3, 3, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8])
+// let arr2 = ["1", "2", "2", "3", "4", "4", "5"]
+
+// function removedup(arr) {
+//     // return [...new Set(arr)];
+//     return [...new Set(arr)]
 // }
 
-// // Driver code
-// let arr = [1, 3, 7, 5, 6, 2];
-// let n = arr.length;
+// console.log(removedup(arr1))
+// console.log(removedup(arr2))
 
-// // Function call
-// findMissing(arr, n);
-
-//======================Remove Duplicates=====================
-
-let arr1 = ([9, 0, 0, 3, 3, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8])
-let arr2 = ["1", "2", "2", "3", "4", "4", "5"]
-
-function removedup(arr) {
-    // return [...new Set(arr)];
-    return [...new Set(arr)]
-}
-
-console.log(removedup(arr1))
-console.log(removedup(arr2))
 

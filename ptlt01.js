@@ -119,3 +119,26 @@ console.log(arr1)
 console.log("Remove duplicates = " + (removedup(arr1)))
 console.log(arr2)
 console.log("Remove duplicates = " + (removedup(arr2)))
+
+
+console.log("=====MAX CHARACTERS=====")
+
+let checkbox = []
+
+function maxCharacters(allkeys) {
+    for (let i = 0; i < allkeys.length; i++) {
+        let keys = allkeys[i];
+        // Storage      checking box      picking each name by keys            
+        check = checkbox.find((eachkey) => eachkey.name == keys)
+
+        if (check == undefined) {
+            checkbox.push({ name: keys, currentMax: 1 })
+        } else {
+            check.currentMax++
+        }
+    }
+    //get the last position that sort values ​​ascending and pop the most
+    console.log(checkbox.sort((a, b) => a.currentMax - b.currentMax).pop())
+}
+
+maxCharacters('jddddddddsssssskkkkkdjjjdfffffffccccc')

@@ -156,14 +156,43 @@
 
 //============================================
 
-let n = 0
-let m = 5
+// console.log("=====FACTORIAL FUCNTION=====")
 
-function factorial() {
-    for (let n = 0; n < m; n++) {
-        let o = n + 1
-        console.log(o)
+function factorial(x) {
+    let result = 1
+    for (let index = 1; index <= x; index++) {
+        result = result * index // 1 2 3 4 5
+
+        // Explanation     index = 1           index <= x[5]       index++    result = result[1] * index
+        // 1st                1                  Yes                 1               =  1 * 1 = 1
+        // 2st                2                  Yes                 2          1    =  1 * 2 = 2
+        // 3st                3                  Yes                 3          2    =  2 * 3 = 6
+        // 4st                4                  Yes                 4          6    =  6 * 4 = 24
+        // 5st                5                  Yes                 5          24   =  24 * 5 = 120
+        // 5st                6                  No                  -          120       -
     }
+    return result
 }
 
-factorial()
+console.log(factorial(3)) // 1*2*3 = 6
+console.log(factorial(4)) // 1*2*3*4 = 24
+console.log(factorial(5)) // 1*2*3*4*5 = 120
+
+// How to make 1*2*3 ?? the result not correct
+
+//============================================
+
+
+
+function practicefactorial(x) {
+    let result = 1
+    for (let index = 1; index <= x; index++) {
+        result = result * index
+        // result = 1*1=1, 1*2=2, 2*3=6, 6*4=24, 24*5=120, 120*6= 720, stop cause 7 is not <=x
+    }
+    return result
+}
+
+console.log(practicefactorial(6))
+console.log(practicefactorial(5))
+console.log(practicefactorial(4))

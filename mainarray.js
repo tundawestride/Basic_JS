@@ -34,64 +34,67 @@
 // console.log(arr4);
 // console.log(arr4.length)
 
-// // //========================================== Return Max value of words.
+// //========================================== Return Max value of words.
 
-// // console.log("=====Practice join array=====")
-// // let word1 = ["I"]
-// // let word2 = ["a", "m"]
-// // let word3 = ["g", "o", "i", "n", "g"]
-// // let word4 = ["t", "o"]
-// // let word5 = ["t", "h", "e"]
-// // let word6 = ["m", "u", "s", "e", "u", "m"]
+// This is too long and incorrect
 
-// // // console.log(word1)
-// // // console.log(word2)
-// // // console.log(word3)
+// console.log("=====Practice join array=====")
+// let word1 = ["I"]
+// let word2 = ["a", "m"]
+// let word3 = ["g", "o", "i", "n", "g"]
+// let word4 = ["t", "o"]
+// let word5 = ["t", "h", "e"]
+// let word6 = ["m", "u", "s", "e", "u", "m"]
 
-// // let word10 = word1.join("")
-// // let word20 = word2.join("")
-// // let word30 = word3.join("")
-// // let word40 = word4.join("")
-// // let word50 = word5.join("")
-// // let word60 = word6.join("")
+// // console.log(word1)
+// // console.log(word2)
+// // console.log(word3)
 
-// // // console.log(word10)
-// // // console.log(word20)
-// // // console.log(word30)
+// let word10 = word1.join("")
+// let word20 = word2.join("")
+// let word30 = word3.join("")
+// let word40 = word4.join("")
+// let word50 = word5.join("")
+// let word60 = word6.join("")
 
-// // let word1length = word10.length
-// // let word2length = word20.length
-// // let word3length = word30.length
-// // let word4length = word40.length
-// // let word5length = word50.length
-// // let word6length = word60.length
+// // console.log(word10)
+// // console.log(word20)
+// // console.log(word30)
 
-// // // console.log(word1length)
-// // // console.log(word2length)
-// // // console.log(word3length)
+// let word1length = word10.length
+// let word2length = word20.length
+// let word3length = word30.length
+// let word4length = word40.length
+// let word5length = word50.length
+// let word6length = word60.length
 
-// // let sentence = "'" + word10 + " " + word20 + " " + word30 + " " + word40 + " " + word50 + " " + word60 + "'"
-// // console.log(sentence)
+// // console.log(word1length)
+// // console.log(word2length)
+// // console.log(word3length)
+
+// let sentence = "'" + word10 + " " + word20 + " " + word30 + " " + word40 + " " + word50 + " " + word60 + "'"
+// console.log(sentence)
 
 
-// // function longestWord() {
-// //     let themost = Math.max(word1length, word2length, word3length, word4length, word5length, word6length)
-// //     // console.log(themost)
-// //     if (themost === word1length) {
-// //         console.log("The Longest Word is " + word10)
-// //     } else if (themost === word2length) {
-// //         console.log("The Longest Word is " + word20)
-// //     } else if (themost === word3length) {
-// //         console.log("The Longest Word is " + word30)
-// //     } else if (themost === word4length) {
-// //         console.log("The Longest Word is " + word40)
-// //     } else if (themost === word5length) {
-// //         console.log("The Longest Word is " + word50)
-// //     } else if (themost === word6length) {
-// //         console.log("The Longest Word is " + word60)
-// //     }
-// // }
-// // longestWord()
+// function longestWord() {
+//     let themost = Math.max(word1length, word2length, word3length, word4length, word5length, word6length)
+//     console.log(themost)
+//     if (themost === word1length) {
+//         console.log("The Longest Word is " + word10)
+//     } else if (themost === word2length) {
+//         console.log("The Longest Word is " + word20)
+//     } else if (themost === word3length) {
+//         console.log("The Longest Word is " + word30)
+//     } else if (themost === word4length) {
+//         console.log("The Longest Word is " + word40)
+//     } else if (themost === word5length) {
+//         console.log("The Longest Word is " + word50)
+//     } else if (themost === word6length) {
+//         console.log("The Longest Word is " + word60)
+//     }
+// }
+// longestWord()
+
 
 // // //==========================================
 
@@ -284,29 +287,29 @@
 
 // let arr = [2, 1, 3, 7, 6] // missing is 4,5
 // วนลูปตั้งแต่ 1 - 7 for loop
-// ถ้า item แต่ละรอบ ไม่อยู่ใน Array ที่รับมา ให้ Push ค่าใน Result if arr.include(item) เป็นการเช็คว่ามีค่าไหม !arr.include(item) เป็นการเช็คว่าถ้าไม่มีแล้วจะต้องการให้ return เป็นอะไร ใช้ for, if 
+// ถ้า item แต่ละรอบ ไม่อยู่ใน Array ที่รับมา ให้ Push ค่าใน Result if arr.include(item) เป็นการเช็คว่ามีค่าไหม !arr.include(item) เป็นการเช็คว่าถ้าไม่มีแล้วจะต้องการให้ return เป็นอะไร ใช้ for, if
 
-function findmissingnumber(arr) {
-    console.log(arr)
+// function findmissingnumber(arr) {
+//     console.log(arr)
 
-    let maxarr = Math.max(...arr)
-    // console.log(maxarr)
-    let minarr = Math.min(...arr)
-    // console.log(minarr)
+//     let maxarr = Math.max(...arr)
+//     // console.log(maxarr)
+//     let minarr = Math.min(...arr)
+//     // console.log(minarr)
 
-    result = []
+//     result = []
 
-    for (let i = minarr; i <= maxarr; i++) {
-        // console.log(i)
-        if (!arr.includes(i)) {
-            result.push(i)
-        }
-    }
-    console.log("missing number is")
-    return console.log(result)
-}
-findmissingnumber([2, 1, 3, 7, 6])
-findmissingnumber([8, 1, 3])
+//     for (let i = minarr; i <= maxarr; i++) {
+//         // console.log(i)
+//         if (!arr.includes(i)) {
+//             result.push(i)
+//         }
+//     }
+//     console.log("missing number is")
+//     return console.log(result)
+// }
+// findmissingnumber([2, 1, 3, 7, 6])
+// findmissingnumber([8, 1, 3])
 
 
 // ======================Remove Duplicates=====================
@@ -322,4 +325,25 @@ findmissingnumber([8, 1, 3])
 // console.log(removedup(arr1))
 // console.log(removedup(arr2))
 
+//===================LONGEST WORD FUNCTION=====================
+
+function longestword(sentence) {
+    console.log(sentence)
+
+    let splitsentence = sentence.split(' ')
+    // console.log(splitsentence)  // ['..', '..', '..', ...] array
+
+    // sort by array length
+    let longestwordlength = splitsentence.sort((a, b) => a.length - b.length)
+    // console.log(longestwordlength) // ['.shortestlength.', ...'...longestlength...']
+
+    return longestwordlength.pop() // [ return last word ]
+
+}
+
+console.log("Longest word is = " + longestword('I want to travel to galapagos island because it is very beautiful.'))
+console.log("Longest word is = " + longestword('I am feeling great right now.'))
+console.log("Longest word is = " + longestword('Would you buy me a movie ticket please!'))
+
+//=======================================
 

@@ -30,6 +30,14 @@ function factorial(x) {
     return result
 }
 
+// Explanation     index = 1           index <= x[5]       index++    result = result[1] * index
+// 1st                1                  Yes                 1               =  1 * 1 = 1
+// 2st                2                  Yes                 2          1    =  1 * 2 = 2
+// 3st                3                  Yes                 3          2    =  2 * 3 = 6
+// 4st                4                  Yes                 4          6    =  6 * 4 = 24
+// 5st                5                  Yes                 5          24   =  24 * 5 = 120
+// 5st                6                  No                  -          120       -
+
 console.log(factorial(3)) // 1*2*3 = 6
 console.log(factorial(4)) // 1*2*3*4 = 24
 console.log(factorial(5)) // 1*2*3*4*5 = 120

@@ -34,19 +34,19 @@ let fillcardnumber = document.getElementById("fillcardnumber")
 
 function fillcn() {
     fillcardnumber.addEventListener('input', (e) => {
-        let numberfield = (e).target.value
-        let result = []
+        let numberfield = (e).target.value // This is filling field
+        let result = [] // build empty array 
 
         for (let index = 0; index < numberfield.length; index++) {
             const alldigits = numberfield[index];
 
-            if ((index + 1) % 4 === 0) {
-                result.push(alldigits + " ")
-            } else { result.push(alldigits) }
+            if ((index + 1) % 4 === 0) { // Make index start at 1 and every 4 take action 
+                result.push(alldigits + " ") // make input push " " ebery 4 digits in empty array
+            } else { result.push(alldigits) } // if not at 4, can show regular input
         }
-        console.log(result)
+        // console.log(result)
 
-        cardnumberdisplay.textContent = result.join("")
+        cardnumberdisplay.textContent = result.join("") // make allnumber join 
     }
     )
 }

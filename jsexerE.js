@@ -3,27 +3,27 @@
 
 //=====1. Older Than Me https://edabit.com/challenge/iwdZiFucR5wkQsFHu
 
-// let p1 = {
-//     name: 'Sammy',
-//     Age: 40
-// }
+let p1 = {
+    name: 'Sammy',
+    Age: 40
+}
 
-// let p2 = {
-//     name: 'Joel',
-//     Age: 36
-// }
+let p2 = {
+    name: 'Joel',
+    Age: 36
+}
 
-// let p3 = {
-//     name: 'Lily',
-//     Age: 24
-// }
-// let p4 = {
-//     name: 'Mariel',
-//     Age: 24
-// }
+let p3 = {
+    name: 'Lily',
+    Age: 24
+}
+let p4 = {
+    name: 'Mariel',
+    Age: 24
+}
 
-// // console.log(p1.name)
-// // console.log(p1.Age)
+// console.log(p1.name)
+// console.log(p1.Age)
 
 // function CompareAge(px, py) {
 //     let pxAge = px.Age
@@ -172,10 +172,28 @@
 //     return (cutonlyBoolean)
 // }
 
+// //false, null, 0, "", undefined, and NaN = False
+
 // console.log(compact([0, 1, false, 2, "", 3]))
 // console.log(compact([5, 1, true, " + ", undefined, 3]))
 // console.log(compact([false, null, 0, "", undefined, NaN]))
 
-//=====10.
+//=====10.Is it Time for Milk and Cookies? https://edabit.com/challenge/hPWnaSckJke5FXNEH
 
-//=====11.
+function timeForMilkAndCookies(date) {
+    // console.log(date)
+    let getdate = date.getDate();
+    let getmo = date.getMonth();
+    // console.log(getdate) // 24
+    // console.log(getmo) // 11
+    if (getdate == 24 && getmo == 11) {
+        return true
+    } else { return false }
+
+}
+
+console.log(timeForMilkAndCookies(new Date(2013, 11, 24)))
+console.log(timeForMilkAndCookies(new Date(2013, 0, 23)))
+console.log(timeForMilkAndCookies(new Date(3000, 10, 24)))
+
+//=====

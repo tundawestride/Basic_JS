@@ -180,20 +180,41 @@ let p4 = {
 
 //=====10.Is it Time for Milk and Cookies? https://edabit.com/challenge/hPWnaSckJke5FXNEH
 
-function timeForMilkAndCookies(date) {
-    // console.log(date)
-    let getdate = date.getDate();
-    let getmo = date.getMonth();
-    // console.log(getdate) // 24
-    // console.log(getmo) // 11
-    if (getdate == 24 && getmo == 11) {
-        return true
-    } else { return false }
+// function timeForMilkAndCookies(date) {
+//     // console.log(date)
+//     let getdate = date.getDate();
+//     let getmo = date.getMonth();
+//     // console.log(getdate) // 24
+//     // console.log(getmo) // 11
+//     if (getdate == 24 && getmo == 11) {
+//         return true
+//     } else { return false }
 
-}
+// }
 
-console.log(timeForMilkAndCookies(new Date(2013, 11, 24)))
-console.log(timeForMilkAndCookies(new Date(2013, 0, 23)))
-console.log(timeForMilkAndCookies(new Date(3000, 10, 24)))
+// console.log(timeForMilkAndCookies(new Date(2013, 11, 24)))
+// console.log(timeForMilkAndCookies(new Date(2013, 0, 23)))
+// console.log(timeForMilkAndCookies(new Date(3000, 10, 24)))
 
-//=====
+//=====11. Profitable Gamble https://edabit.com/challenge/ghbHrRnRiDz9fvQNF
+
+// function profitableGamble(prob, prize, pay) {
+//     let netprofit = (prob * prize) - pay
+//     // console.log(netprofit)
+
+//     if (netprofit > 0) {
+//         console.log('true')
+//     } else { (console.log('false')) }
+
+//     //shorter
+//     // if (prob * prize > pay) {
+//     //     return true
+//     // } else {
+//     //     return false;
+//     // }
+
+// }
+
+// profitableGamble(0.2, 50, 9)
+// profitableGamble(0.9, 1, 2)
+// profitableGamble(0.9, 3, 2)

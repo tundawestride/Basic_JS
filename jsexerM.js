@@ -1,5 +1,5 @@
 //https://edabit.com/challenges/javascript => Medium
-// and Others 
+// and Others
 
 //0.0 Example All About Anonymous Functions: Adding Suffixes https://edabit.com/challenge/Ra85gzkCTtXrNyCag
 
@@ -122,35 +122,73 @@
 
 //=====5. One Odd and One Even https://edabit.com/challenge/d3ZmD3EiNdECFyyPR
 
-let nn = []
+// let nn = []
 
-function oneOddOneEven(n) {
-    nn.push(n)
-    let joinarrtostring = nn.join('')
-    let splitn = joinarrtostring.split('')
-    //let c
+// function oneOddOneEven(n) {
+//     nn.push(n)
+//     let joinarrtostring = nn.join('')
+//     let splitn = joinarrtostring.split('')
+//     //let c
 
-    for (let index = 0; index < splitn.length; index++) {
-        let a = splitn[0] % 2 === 0 // t or f
-        let b = splitn[1] % 2 === 0 // t or f
-        return (a !== b) // if t and false will be true cause not equal
-    }
+//     for (let index = 0; index < splitn.length; index++) {
+//         let a = splitn[0] % 2 === 0 // t or f
+//         let b = splitn[1] % 2 === 0 // t or f
+//         return (a !== b) // if t and false will be true cause not equal
+//     }
 
-    //     if (a !== b) { // in case t and false only 
-    //         c = 'true'
-    //     } else {
-    //         c = 'false'
-    //     }
-    // } return console.log(c)
+//     //     if (a !== b) { // in case t and false only
+//     //         c = 'true'
+//     //     } else {
+//     //         c = 'false'
+//     //     }
+//     // } return console.log(c)
 
+// }
+
+// // console.log(oneOddOneEven(23))
+// // console.log(oneOddOneEven(55))
+// console.log(oneOddOneEven(32))
+// // oneOddOneEven(23)
+// // oneOddOneEven(33)
+// // oneOddOneEven(22)
+// // oneOddOneEven(55)
+
+// https://jscodebox.com/ ไม่มีเฉลย ต้องให้ติวเตอร์ช่วยตรวจ
+//=====6. CamelCase https://jscodebox.com/challenge/camelcase
+
+let newarr = []
+
+function camelCase(n) {
+    let ntrim = n.trim()
+    console.log(ntrim)
+    let ntrimtosplit = n.split(' ') // .., .., ..
+    newarr.push(ntrimtosplit[0].toLowerCase()) // lowercase first arr 
+    // console.log(newarr) // [string]
+    // console.log(nsplit)
+
+    for (let index = 1; index < ntrimtosplit.length; index++) {
+        const element = ntrimtosplit[index];
+        // make first upper case 
+        foraddupper = ntrimtosplit[index].slice(0, 1)
+        firstupper = foraddupper.toUpperCase()
+        // console.log(firstupper) // N F 
+        // cut the rest lower
+        let therest = ntrimtosplit[index].substring(1)
+        let therestlower = therest.toLowerCase()
+        // console.log(therestlower) // ot ound
+        // compound the sentence
+        let upandrest = firstupper + therestlower
+        // console.log(upandrest) // Not Found
+        // push to arr box
+        newarr.push(upandrest) // [ Not Found ]
+        // console.log(newarr) // [lowercase first arr  + upandrest]
+    } return newarr.join('')
 }
 
-// console.log(oneOddOneEven(23))
-// console.log(oneOddOneEven(55))
-console.log(oneOddOneEven(32))
-// oneOddOneEven(23)
-// oneOddOneEven(33)
-// oneOddOneEven(22)
-// oneOddOneEven(55)
+// console.log(camelCase('String not found'))
+console.log(camelCase('Nice Challenge'))
+// console.log(camelCase('Camel Case'))
+// console.log(camelCase(' Is not found '))
 
-//=====6. Change website
+//=====7. 
+

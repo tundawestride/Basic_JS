@@ -15,21 +15,20 @@
 
 //===========Fuction=======//
 
-//function print(x, y, z) {
-// console.log(x)
-// return x + 10
-//return x + y + z
-//}
+// function print(x, y, z) {
+//     console.log(x)
+//     return x + 10
+//     return x + y + z
+// }
 
 // print('Hi')
 // print('123')
 // let number = print(100)
-//console.log(print(100))
+// console.log(print(100))
 
-//console.log(print(1, 2, 3))
+// console.log(print(1, 2, 3))
 
-
-//Math
+// Math
 
 // let Date = Math.random() * 10;
 // console.log(Date)
@@ -37,17 +36,18 @@
 // let something = Math.round(Math.random() * 10);
 // console.log(something)
 
-// let student1 = {
-//     ID: 0001,
-//     Firstname: "Tunda",
-// }
 
-// console.log(student1)
+let student1 = {
+    ID: '0001',
+    Firstname: "Tunda",
+}
 
-// let data = "ABCD"
-// // console.log(data.length)
-// console.log(data.length * 2)
+console.log(student1)
 
-// let fullname = "Tunda Srisawatpichantanit"
-// // console.log(fullname.substring(0, 5));
+let data = "ABCD"
+// console.log(data.length)
+console.log(data.length * 2)
+
+let fullname = "Tunda Srisawatpichantanit"
+console.log(fullname.substring(0, 5));
 

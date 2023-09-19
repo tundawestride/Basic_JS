@@ -103,7 +103,7 @@
 
 // console.log(dis(89, 20))
 // console.log(dis(100, 75))
-// console.log(dis(1500, 50))
+// // console.log(dis(1500, 50))
 
 //=====4. Remove Duplicates from an Array https://edabit.com/challenge/Wd7WKqm95jhcAGATG
 
@@ -129,6 +129,8 @@
 //     let joinarrtostring = nn.join('')
 //     let splitn = joinarrtostring.split('')
 //     //let c
+//     console.log(joinarrtostring)
+//     console.log(splitn)
 
 //     for (let index = 0; index < splitn.length; index++) {
 //         let a = splitn[0] % 2 === 0 // t or f
@@ -156,39 +158,86 @@
 // https://jscodebox.com/ ไม่มีเฉลย ต้องให้ติวเตอร์ช่วยตรวจ
 //=====6. CamelCase https://jscodebox.com/challenge/camelcase
 
-let newarr = []
+// let newarr = []
 
-function camelCase(n) {
-    let ntrim = n.trim()
-    console.log(ntrim)
-    let ntrimtosplit = n.split(' ') // .., .., ..
-    newarr.push(ntrimtosplit[0].toLowerCase()) // lowercase first arr 
-    // console.log(newarr) // [string]
-    // console.log(nsplit)
+// function camelCase(n) {
+//     let ntrim = n.trim()
+//     console.log(ntrim)
+//     let ntrimtosplit = n.split(' ') // .., .., ..
+//     newarr.push(ntrimtosplit[0].toLowerCase()) // lowercase first arr
+//     // console.log(newarr) // [string]
+//     // console.log(nsplit)
 
-    for (let index = 1; index < ntrimtosplit.length; index++) {
-        const element = ntrimtosplit[index];
-        // make first upper case 
-        foraddupper = ntrimtosplit[index].slice(0, 1)
-        firstupper = foraddupper.toUpperCase()
-        // console.log(firstupper) // N F 
-        // cut the rest lower
-        let therest = ntrimtosplit[index].substring(1)
-        let therestlower = therest.toLowerCase()
-        // console.log(therestlower) // ot ound
-        // compound the sentence
-        let upandrest = firstupper + therestlower
-        // console.log(upandrest) // Not Found
-        // push to arr box
-        newarr.push(upandrest) // [ Not Found ]
-        // console.log(newarr) // [lowercase first arr  + upandrest]
-    } return newarr.join('')
-}
+//     for (let index = 1; index < ntrimtosplit.length; index++) {
+//         const element = ntrimtosplit[index];
+//         // make first upper case
+//         foraddupper = ntrimtosplit[index].slice(0, 1)
+//         firstupper = foraddupper.toUpperCase()
+//         // console.log(firstupper) // N F
+//         // cut the rest lower
+//         let therest = ntrimtosplit[index].substring(1)
+//         let therestlower = therest.toLowerCase()
+//         // console.log(therestlower) // ot ound
+//         // compound the sentence
+//         let upandrest = firstupper + therestlower
+//         // console.log(upandrest) // Not Found
+//         // push to arr box
+//         newarr.push(upandrest) // [ Not Found ]
+//         // console.log(newarr) // [lowercase first arr  + upandrest]
+//     } return newarr.join('')
+// }
 
-// console.log(camelCase('String not found'))
-console.log(camelCase('Nice Challenge'))
-// console.log(camelCase('Camel Case'))
-// console.log(camelCase(' Is not found '))
+// // console.log(camelCase('String not found'))
+// console.log(camelCase('Nice Challenge'))
+// // console.log(camelCase('Camel Case'))
+// // console.log(camelCase(' Is not found '))
 
-//=====7. 
+//=====7. URL Parameters https://jscodebox.com/challenge/url-parameters
+
+// let thebox = []
+
+// function getURLParams(url) { // ตัด keys ที่เป็น = และ &... แสดงผลเป็น string
+//     let spliturlcut1 = url.split('=') // แบ่งคำจากการตัด =
+//     // console.log(spliturlcut1)
+
+//     for (let index = 0; index < spliturlcut1.length; index++) {
+//         const element = spliturlcut1[index];
+//         let spliturlcut2 = element.split('&') // แบ่งคำจากการตัด & อีกรอบ
+//         // console.log(spliturlcut2)
+//         thebox.push(spliturlcut2[0]) // เลือกคำหน้า & ใส่ไปใน arr > thebox = []
+//     }
+//     // console.log(thebox) // ได้ arr ชุดที่มีทั้ง URL และ string โดยนำ keys ออกแล้ว
+//     thebox.shift() // เอา URL หน้าสุดออก
+//     return thebox // string - (URLและkeys)
+// }
+
+// // console.log(getURLParams('https://jscodebox.com/index.php?key=Jfs873nj&id=1&action=delete=2'))
+// // console.log(getURLParams('https://jscodebox.com/'))
+// console.log(getURLParams('https://jscodebox.com/?action=new&user_id=3&force=false'))
+
+//=====8. Build Tower https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+
+
+// function Buildtoewer(floorsnum) {
+//     let item1 = '*'
+//     let item2 = '*'
+//     let block = []
+//     let finalblock = []
+
+//     for (let index = 0; index < floorsnum; index++) {
+//         let building1 = block.push(item1)
+
+//         if (index !== 0) {
+//             block.push(item2)
+//         } else { }
+//         // console.log(block)
+//         let finalfloor = block.join('')
+//         console.log(([finalfloor]))
+//     }
+// }
+// Buildtoewer(6)
+
+//=====9. 
+
+
 

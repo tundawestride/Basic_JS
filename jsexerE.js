@@ -3,24 +3,24 @@
 
 //=====1. Older Than Me https://edabit.com/challenge/iwdZiFucR5wkQsFHu
 
-let p1 = {
-    name: 'Sammy',
-    Age: 40
-}
+// let p1 = {
+//     name: 'Sammy',
+//     Age: 40
+// }
 
-let p2 = {
-    name: 'Joel',
-    Age: 36
-}
+// let p2 = {
+//     name: 'Joel',
+//     Age: 36
+// }
 
-let p3 = {
-    name: 'Lily',
-    Age: 24
-}
-let p4 = {
-    name: 'Mariel',
-    Age: 24
-}
+// let p3 = {
+//     name: 'Lily',
+//     Age: 24
+// }
+// let p4 = {
+//     name: 'Mariel',
+//     Age: 24
+// }
 
 // console.log(p1.name)
 // console.log(p1.Age)
@@ -62,8 +62,6 @@ let p4 = {
 
 //=====3. Absolute Sum
 
-// let arrabssum = []
-
 // function getAbsSum(arr) {
 //     totalsum = 0
 //     for (let index = 0; index < arr.length; index++) {
@@ -92,9 +90,9 @@ let p4 = {
 
 //=====5. Incorrect Import Statement
 
-//from module_name import object
+// from module_name import object
 
-// function fixImport(s)
+// function fixImport(s) {
 
 //     letwords = s.split(' ')
 //     //                index          0        1        2         3
@@ -121,7 +119,7 @@ let p4 = {
 // bomb("Hey, did you think there is a bomb?.")
 // bomb("This goes boom!!!")
 
-//=====7. Tuck in Array https://edabit.com/challenge/7ysTEDruHz2prcJQ9
+// =====7. Tuck in Array https://edabit.com/challenge/7ysTEDruHz2prcJQ9
 
 // function tuckIn(arr1, arr2) {
 //     // console.log(arr1[0])
@@ -198,23 +196,23 @@ let p4 = {
 
 //=====11. Profitable Gamble https://edabit.com/challenge/ghbHrRnRiDz9fvQNF
 
-// function profitableGamble(prob, prize, pay) {
-//     let netprofit = (prob * prize) - pay
-//     // console.log(netprofit)
+function profitableGamble(prob, prize, pay) {
+    let netprofit = (prob * prize) - pay
+    // console.log(netprofit)
 
-//     if (netprofit > 0) {
-//         console.log('true')
-//     } else { (console.log('false')) }
+    if (netprofit > 0) {
+        console.log('true')
+    } else { (console.log('false')) }
 
-//     //shorter
-//     // if (prob * prize > pay) {
-//     //     return true
-//     // } else {
-//     //     return false;
-//     // }
+    //shorter
+    // if (prob * prize > pay) {
+    //     return true
+    // } else {
+    //     return false;
+    // }
 
-// }
+}
 
-// profitableGamble(0.2, 50, 9)
-// profitableGamble(0.9, 1, 2)
+profitableGamble(0.2, 50, 9)
+profitableGamble(0.9, 1, 2)
 // profitableGamble(0.9, 3, 2)

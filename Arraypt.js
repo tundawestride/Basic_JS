@@ -59,7 +59,7 @@ function trytextandspace0() { // assign to show on display
 }
 trytextandspace0()
 
-function trytextandspace1() { // connect input and display 
+function trytextandspace1() { // connect input and display
     testfill1.addEventListener('input', (e) => {
         let showwhatinput = (e).target.value
         testdisplay1.textContent = showwhatinput.split("")

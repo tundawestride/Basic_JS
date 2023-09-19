@@ -1,4 +1,5 @@
-let number = Number(prompt("Pick a number"));
+// let number = Number(prompt("Pick a number")); // In HTML
+let number = Number(56); // JS
 
 if (!Number.isNaN(number)) {
     // Number.isNaN(type<number>) => false, Number.isNaN(type<Other>) => true

@@ -10,13 +10,13 @@
 //     if (nsplit.pop() === "!") {
 //         word = nsplit.join('')
 //         console.log(word)
-//     } else { console.log(n) }
+//     } return n
 // }
-// ok (เพิ่มเงื่อนไข ! ค่อยตัด)
+// // ok (เพิ่มเงื่อนไข ! ค่อยตัด)
 
-// remove("Hi!")
-// remove("Hi! Hi!")
-// remove("Hi!!!")
+// // remove("Hi!")
+// // remove("Hi! Hi!")
+// // remove("Hi!!!")
 // remove("Hi")
 
 //=====test2 เขียนฟังก์ชั่นรวมตัวเลขที่รับมา  (15 คะแนน)
@@ -28,6 +28,7 @@
 //     let y = numtostring.split("")
 //     // console.log(y) // [ '1', '2', '3' ]
 //     // console.log(y[1]) //  2 = number
+//     let sum = 0
 //     for (let index = 0; index < y.length; index++) {
 //         let element = y[index];
 //         // console.log(element)
@@ -35,23 +36,17 @@
 //         let result = element ** (index + 1)
 //         // console.log(index + 1) // 1 2 3 4
 //         // console.log(result) // 3 ** 1, 2 ** 2, 1 ** 3
-//         sumbox.push(result)
-//         // console.log(sumbox)
-//     }
+//         sum = sum + result
+//     } return sum
 
-//     //sum
-//     let sum = 0
-//     for (let i = 0; i < sumbox.length; i++) {
-//         let eachnum = sumbox[i];
-//         sum = sum + eachnum
-//         // console.log(sum)
-//     } return console.log(sum)
 // }
+
+// // ทำใน Loop เดียว
 
 // // crossinput(321)
 // // crossinput(89)
-// // crossinput(123)
-// crossinput(65)
+// console.log(crossinput(123))
+// // console.log(crossinput(65))
 
 //test 3 หาผลรวมสุดท้ายของตัวเลขที่รับมา(20 คะแนน)
 
@@ -146,40 +141,44 @@
 
 //=====test 7 สร้างฟังก์ชั่นเรียงเลขคี่ โดยที่เลขคู่จะต้องอยู่ตำแหน่งเดิม(35 คะแนน)
 
-let oddbox = []
-let sortedbox = []
+// let oddbox = []
+// let sortedbox = []
 
-function pushtest(array) {
+// function pushtest(array) {
 
-    //Select odd
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        // console.log(arrbox)
-        if (element % 2 !== 0) {
-            oddbox.push(element) //  = [ 5, 3 ]
-            let sortoddbox = oddbox.sort((a, b) => a - b)
-            console.log(oddbox) // add arrat after sort [ 3, 5, ...]
-        }
-    }
+//     //Select odd
+//     // for (let index = 0; index < array.length; index++) {
+//     //     const element = array[index];
+//     //     // console.log(arrbox)
+//     //     if (element % 2 !== 0) {
+//     //         oddbox.push(element) //  = [ 5, 3 ]
+//     //         let sortoddbox = oddbox.sort((a, b) => a - b)
+//     //         console.log(oddbox) // add arrat after sort [ 3, 5, ...]
+//     //     }
+//     // }
 
-    // Rearrengment only 'odd' but even stay the same index 
-    for (let i = 0; i < array.length; i++) {
-        const each = array[i];
+//     //Select odd แบบที่สั้นกว่า
+//     const oddbox = array.filter(element => element % 2 !== 0).sort((a, b) => a - b)
+//     console.log('odd box = ', oddbox) // มันเป็น อาเรย์อยู่แล้วแต่เราใส่ + เลยเป็นสตริง แต่ถ้าใช้ , จะเป็น อาเรย์
 
-        if (each % 2 === 0) {
-            sortedbox.push(each)
-        } else if (each % 2 !== 0) {
-            // sortedbox.push('test')
-            // console.log(oddbox.shift()) remove the first array
-            sortedbox.push(oddbox.shift()) // push the selected removed array above
-        }
+//     // Rearrengment only 'odd' but even stay the same index
+//     for (let i = 0; i < array.length; i++) {
+//         const each = array[i];
 
-        console.log(sortedbox)
-    }
-}
+//         if (each % 2 === 0) {
+//             sortedbox.push(each)
+//         } else if (each % 2 !== 0) {
+//             // sortedbox.push('test')
+//             // console.log(oddbox.shift()) remove the first array
+//             sortedbox.push(oddbox.shift()) // push the selected removed array above
+//         }
+
+//         console.log(sortedbox)
+//     }
+// }
 
 // pushtest([5, 8, 6, 3, 4])
-pushtest([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+// // pushtest([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
 
 // 9.สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด ประเภทเงินทอน[1, 2, 5, 10, 20, 50, 100, 500, 1000] input: เงินที่ต้องจ่าย, รับเงินที่ลูกค้าจ่าย output: เหรียญหรือแบงค์ที่ต้องทอน(60 คะแนน)
 

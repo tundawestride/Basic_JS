@@ -15,12 +15,12 @@
 // Switch case using when the value is not have any conditions, just a value. If you want to add conditions, must using if else method
 
 
-// for (let n = 1; n <= 100; n++) {
-//     let output = "";
-//     if (n % 3 === 0) output += "Fizz";
-//     if (n % 5 === 0) output += "Buzz";
-//     console.log(output || n);
-// }
+for (let n = 1; n <= 100; n++) {
+    let output = "";
+    if (n % 3 === 0) output += "Fizz";
+    if (n % 5 === 0) output += "Buzz";
+    console.log(output || n);
+}
 
 // Start with for loop and add conditions if, the program will calculate every step
 // การเพิ่มค่าทีละ 1 ** [i++  หรือ i = i + 1 หรือ i += 1] **

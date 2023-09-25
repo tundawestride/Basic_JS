@@ -1,21 +1,25 @@
 //https://docs.google.com/document/d/1Q5GV4SSq_qmgbQg7TS0usI8x0aw9dTvEXJZxLTxlPKo/edit
 
-//test1 ลบเครื่องหมายออกจากส่วนท้ายของสตริง (10 คะแนน)
+//=====test1 ลบเครื่องหมายออกจากส่วนท้ายของสตริง (10 คะแนน)
 
 // function remove(n) {
 //     let nsplit = n.split("")
 //     // console.log(nsplit)
-//     nsplit.pop()
-//     // console.log(nsplit)
-//     word = nsplit.join('')
-//     console.log(word)
+//     // console.log(nsplit.pop()) // last pop out
+
+//     if (nsplit.pop() === "!") {
+//         word = nsplit.join('')
+//         console.log(word)
+//     } else { console.log(n) }
 // }
+// ok (เพิ่มเงื่อนไข ! ค่อยตัด)
 
-// // remove("Hi!")
-// // remove("Hi! Hi!")
+// remove("Hi!")
+// remove("Hi! Hi!")
 // remove("Hi!!!")
+// remove("Hi")
 
-//!!!! test2 เขียนฟังก์ชั่นรวมตัวเลขที่รับมา  (15 คะแนน)
+//=====test2 เขียนฟังก์ชั่นรวมตัวเลขที่รับมา  (15 คะแนน)
 
 // sumbox = []
 
@@ -24,15 +28,13 @@
 //     let y = numtostring.split("")
 //     // console.log(y) // [ '1', '2', '3' ]
 //     // console.log(y[1]) //  2 = number
-
 //     for (let index = 0; index < y.length; index++) {
 //         let element = y[index];
 //         // console.log(element)
 //         // console.log(y.length)
 //         let result = element ** (index + 1)
-//         // console.log(index + 1) // 1 2 3 4 
-//         // console.log(result) // 3 ** 1, 2 ** 2, 1 ** 3 
-
+//         // console.log(index + 1) // 1 2 3 4
+//         // console.log(result) // 3 ** 1, 2 ** 2, 1 ** 3
 //         sumbox.push(result)
 //         // console.log(sumbox)
 //     }
@@ -53,103 +55,28 @@
 
 //test 3 หาผลรวมสุดท้ายของตัวเลขที่รับมา(20 คะแนน)
 
-let arrbox = []
+// function sumfinal(numset) {
+//     let result = numset
+//     //1. to array
+//     while (result > 10) { // 4. set last result
+//         let numsetarray = result.toString().split("") // *** result not numset
+//         console.log(numsetarray)
 
-function sumfinal(num) {
-    let numtostring = num.toString()
-    numarray = numtostring.split("")
-    // console.log(numarray) // [ '9', '9', '9' ]
-    // console.log(numarray.length) // 3
-    //factorial
+//         //2.factorial between array
+//         let sum = 1
+//         for (let index = 0; index < numsetarray.length; index++) {
+//             let elementtocal = numsetarray[index];
+//             sum = sum * elementtocal
+//             // console.log(sum)
+//         } result = sum // 3. set result
 
-    // for 3 digits
-    if (numarray.length == 3) {
-        total1 = 1
-        for (let index = 0; index < numarray.length; index++) {
-            let element = numarray[index];
-            // console.log(element)
-            total1 = total1 * element
-            // console.log(total1)
-        }
-        let total1tostring = total1.toString()
-        total1array = total1tostring.split("")
-        // console.log(total1array)
-        // console.log(total1array.length)
-
-        total2 = 1
-        for (let indexx = 0; indexx < total1array.length; indexx++) {
-            let elementt = total1array[indexx];
-            // console.log(elementt)
-            total2 = total2 * elementt
-            // console.log(total2)
-        }
-        let total2tostring = total2.toString()
-        total2array = total2tostring.split("")
-        // console.log(total2array)
-
-        total3 = 1
-        for (let indexxx = 0; indexxx < total2array.length; indexxx++) {
-            let elementtt = total2array[indexxx];
-            // console.log(elementtt)
-            total3 = total3 * elementtt
-            // console.log(total3)
-        }
-
-        let total3tostring = total3.toString()
-        total3array = total3tostring.split("")
-        // console.log(total3array)
-
-        total4 = 1
-        for (let indexxxx = 0; indexxxx < total3array.length; indexxxx++) {
-            let elementttt = total2array[indexxxx];
-            // console.log(elementttt)
-            total4 = total4 * elementttt
-            // console.log(total4)
-        } return console.log(total4)
-
-        //for 2 digits
-    } else if (numarray.length == 2) {
-        total1 = 1
-        for (let index = 0; index < numarray.length; index++) {
-            let element = numarray[index];
-            // console.log(element)
-            total1 = total1 * element
-            // console.log(total1)
-        }
-        let total1tostring = total1.toString()
-        total1array = total1tostring.split("")
-        // console.log(total1array)
-        // console.log(total1array.length)
-
-        total2 = 1
-        for (let indexx = 0; indexx < total1array.length; indexx++) {
-            let elementt = total1array[indexx];
-            // console.log(elementt)
-            total2 = total2 * elementt
-            // console.log(total2)
-        }
-        let total2tostring = total2.toString()
-        total2array = total2tostring.split("")
-        // console.log(total2array)
-
-        total3 = 1
-        for (let indexxx = 0; indexxx < total2array.length; indexxx++) {
-            let elementtt = total2array[indexxx];
-            // console.log(elementtt)
-            total3 = total3 * elementtt
-            // console.log(total3)
-        } return console.log(total3)
-
-    } else {
-        return (console.log(num))
-    }
-
-}
-
+//         //
+//     } console.log(' the result that > 10 while loop = ' + result)
+// }
 // sumfinal(999)
-// sumfinal(39)
-sumfinal(723)
-// sumfinal(9)
+// // sumfinal(39)
+// // sumfinal(723)
+// // sumfinal(9)
 
 // test4 เขียนฟังก์ชันรีเทิร์นค่า ตัวอักษรที่อยู่กึ่งกลางของข้อความ  (20 คะแนน)
 
@@ -159,10 +86,10 @@ sumfinal(723)
 //     console.log(wsplit)
 //     // console.log(wsplit.length)
 //     // console.log(wsplit.length % 2 !== 0)
-
+//     let middle = word.length // 2 เขียนแทน 170 + 181
 //     //คี่
 //     if (wsplit.length % 2 !== 0) {
-//         let middle = word.length / 2
+//         // let middle = word.length / 2
 //         let middlefront = Math.floor(middle)
 //         // let middleback = Math.ceil(middle)
 
@@ -173,7 +100,7 @@ sumfinal(723)
 
 //         //คู่
 //     } else if (wsplit.length % 2 == 0) {
-//         let middle = word.length / 2
+//         // let middle = word.length / 2
 //         // console.log(middle)
 //         let middlefr = middle - 1
 //         console.log(wsplit[middlefr] + wsplit[middle]) // กลาง2ตัว
@@ -181,36 +108,83 @@ sumfinal(723)
 //     else (console.log(word))
 
 // }
-// middleword('pompom')
+
+// //
+// // middleword('pompom')
 // middleword('test')
-// middleword('testing')
-// middleword('middle')
-// middleword('a')
+// // middleword('testing')
+// // middleword('middle')
+// // middleword('a')
 
 //test 5 เขียนฟังก์ชั่นเเสดงข้อความที่มีจำนวนตัวอักษรเท่ากับตำแหน่งของตัวอักษรนั้นๆ(20 คะแนน)
 
-// let box = []
+// let box = [] // using
 
 // function display(word) {
-//     let splitword = word.split("")
-//     // console.log(splitword)
+//     let splitword = word.split("") // keyword string repeat
+//     console.log(splitword)
 
 //     for (let index = 0; index < splitword.length; index++) {
 //         const element = splitword[index];
-//         let indexset = splitword.indexOf(element, index)
 //         // console.log(element)
-//         // console.log(index)
-//         // console.log(indexset)
-//         let newbox = box.push(splitword[index])
-//         console.log(newbox)
-//         console.log(box)
-//     }
+//         // console.log(index + 1)
+//         let repeatstring = element.repeat(index + 1)
+//         // console.log(repeatstring)
+//         box.push(repeatstring)
+//         // console.log(box)
+//     } return console.log(box.join("-"))
 
 // }
 
-// display("abcd")
+// // display("abcd")
+// // display("big")
+// display("test")
 
+//===== test 6 ไม่เข้าใจโจทย์ สร้างฟังก์ชั่นที่หาความแตกต่างของ array 2 ตัว และเรียงจาก น้อยไปมาก(30 คะแนน)
 // ตัวอย่าง
-// "abcd" -> "a-bb-ccc-dddd"
-// "big" -> "b-ii-ggg"
-// "test" -> "t-ee-sss-tttt"
+// diffArray([1, 2, 3], [100, 2, 1, 10]) => [3, 10, 100]
+
+//=====test 7 สร้างฟังก์ชั่นเรียงเลขคี่ โดยที่เลขคู่จะต้องอยู่ตำแหน่งเดิม(35 คะแนน)
+
+let oddbox = []
+let sortedbox = []
+
+function pushtest(array) {
+
+    //Select odd
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        // console.log(arrbox)
+        if (element % 2 !== 0) {
+            oddbox.push(element) //  = [ 5, 3 ]
+            let sortoddbox = oddbox.sort((a, b) => a - b)
+            console.log(oddbox) // add arrat after sort [ 3, 5, ...]
+        }
+    }
+
+    // Rearrengment only 'odd' but even stay the same index 
+    for (let i = 0; i < array.length; i++) {
+        const each = array[i];
+
+        if (each % 2 === 0) {
+            sortedbox.push(each)
+        } else if (each % 2 !== 0) {
+            // sortedbox.push('test')
+            // console.log(oddbox.shift()) remove the first array
+            sortedbox.push(oddbox.shift()) // push the selected removed array above
+        }
+
+        console.log(sortedbox)
+    }
+}
+
+// pushtest([5, 8, 6, 3, 4])
+pushtest([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+
+// 9.สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด ประเภทเงินทอน[1, 2, 5, 10, 20, 50, 100, 500, 1000] input: เงินที่ต้องจ่าย, รับเงินที่ลูกค้าจ่าย output: เหรียญหรือแบงค์ที่ต้องทอน(60 คะแนน)
+
+// ตัวอย่าง Input:
+
+// จำนวนเงินที่ต้องจ่าย 35 บาท ลูกค้าจ่ายเข้ามา 100 บาท
+
+// Output: ทอนด้วยแบงค์ 50 1 ใบ, เหรียญ 10 1 เหรียญ, เหรียญ 5 1 เหรียญ

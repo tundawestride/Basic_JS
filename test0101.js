@@ -48,7 +48,7 @@
 // console.log(crossinput(123))
 // // console.log(crossinput(65))
 
-//test 3 หาผลรวมสุดท้ายของตัวเลขที่รับมา(20 คะแนน)
+//=====test 3 หาผลรวมสุดท้ายของตัวเลขที่รับมา(20 คะแนน)
 
 // function sumfinal(numset) {
 //     let result = numset
@@ -73,7 +73,7 @@
 // // sumfinal(723)
 // // sumfinal(9)
 
-// test4 เขียนฟังก์ชันรีเทิร์นค่า ตัวอักษรที่อยู่กึ่งกลางของข้อความ  (20 คะแนน)
+//===== test4 เขียนฟังก์ชันรีเทิร์นค่า ตัวอักษรที่อยู่กึ่งกลางของข้อความ  (20 คะแนน)
 
 // function middleword(word) {
 //     console.log(word)
@@ -111,7 +111,7 @@
 // // middleword('middle')
 // // middleword('a')
 
-//test 5 เขียนฟังก์ชั่นเเสดงข้อความที่มีจำนวนตัวอักษรเท่ากับตำแหน่งของตัวอักษรนั้นๆ(20 คะแนน)
+//======test 5 เขียนฟังก์ชั่นเเสดงข้อความที่มีจำนวนตัวอักษรเท่ากับตำแหน่งของตัวอักษรนั้นๆ(20 คะแนน)
 
 // let box = [] // using
 
@@ -135,9 +135,35 @@
 // // display("big")
 // display("test")
 
-//===== test 6 ไม่เข้าใจโจทย์ สร้างฟังก์ชั่นที่หาความแตกต่างของ array 2 ตัว และเรียงจาก น้อยไปมาก(30 คะแนน)
-// ตัวอย่าง
-// diffArray([1, 2, 3], [100, 2, 1, 10]) => [3, 10, 100]
+//===== test 6 สร้างฟังก์ชั่นที่หาความแตกต่างของ array 2 ตัว และเรียงจาก น้อยไปมาก(30 คะแนน)
+
+// let differbox = []
+
+// //ลองใช้ filter แล้วไม่ออกคะ ใช้ Include แทน
+// function diffArray(arrayA, arrayB) {
+
+//     // Check A, in B
+//     for (let i = 0; i < arrayB.length; i++) {
+//         const elementB = arrayB[i];
+//         if (!arrayA.includes(elementB)) {
+//             // console.log(elementB)
+//             differbox.push(elementB)
+//         }
+//     }
+
+//     // Check B, in A
+//     for (let ii = 0; ii < arrayA.length; ii++) {
+//         const elementA = arrayA[ii];
+//         if (!arrayB.includes(elementA)) {
+//             differbox.push(elementA)
+//         }
+//     }
+
+//     return console.log(differbox.sort((a, b) => a - b))
+// }
+
+// diffArray([1, 2, 3], [100, 2, 1, 10])
+// // diffArray([9, 5, 4], [4, 8, 7, 5])
 
 //=====test 7 สร้างฟังก์ชั่นเรียงเลขคี่ โดยที่เลขคู่จะต้องอยู่ตำแหน่งเดิม(35 คะแนน)
 
@@ -180,7 +206,41 @@
 // pushtest([5, 8, 6, 3, 4])
 // // pushtest([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
 
-// 9.สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด ประเภทเงินทอน[1, 2, 5, 10, 20, 50, 100, 500, 1000] input: เงินที่ต้องจ่าย, รับเงินที่ลูกค้าจ่าย output: เหรียญหรือแบงค์ที่ต้องทอน(60 คะแนน)
+//=====8. สร้างฟังก์ชันที่รับค่า nums เป็น Array และ target เป็น number จากนั้นให้ รีเทิร์นตำแหน่งของ item ภายใน nums  2ตัวที่มี **ผลรวม (บวก)** เท่ากับ target(40 คะแนน)
+//Ex1: Input: nums = [2, 7, 11, 15], target = 9 Output: [0, 1]
+//* (เช่น ตำแหน่งที่ 0 1 บวกกันได้ 9 )*
+//Ex2 Input: nums = [3, 2, 4], target = 6 Output: [1, 2]
+
+// let input = [2, 7, 11, 15]
+// let target = 9
+
+// function calwithtarget(input, target) {
+//     let total = 0
+//     output = []
+
+//     for (let index = 0; index < input.length; index++) {
+//         let element = (Number(input[index]));
+//         // console.log('index = ', element)
+//         let elementplus = (Number(input[index + 1]))
+//         // console.log('index +1 = ', elementplus)
+
+//         //Sum of couple number
+//         total = element + elementplus
+//         // console.log(total)
+
+//         if (total === target) {
+//             output.push(input.indexOf(element), input.indexOf(elementplus))
+//             // console.log(output)
+//         }
+//     } return console.log('target = ', target, 'output = ', output)
+
+// }
+
+// calwithtarget(input, target)
+// // calwithtarget([2, 7, 11, 15], 9)
+// calwithtarget([3, 2, 4], 6)
+
+//===== 9.สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด ประเภทเงินทอน[1, 2, 5, 10, 20, 50, 100, 500, 1000] input: เงินที่ต้องจ่าย, รับเงินที่ลูกค้าจ่าย output: เหรียญหรือแบงค์ที่ต้องทอน(60 คะแนน)
 
 // ตัวอย่าง Input:
 

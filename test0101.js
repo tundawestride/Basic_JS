@@ -407,36 +407,40 @@
 
 //9.2 อีกวิธีจาก 9.1
 
-let arrallmoney = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
-let arrnotes = []
+let allnotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+let allchanges = []
 
-function drinkpayment(price, pay) {
-    let actualchange = pay - price
+function paymentmachine(prize, pay) {
 
-    if (pay > price) { console.log('ราคา', price, 'จ่ายมา', pay, 'เงินทอน = ', actualchange) }
+    let changeraw = pay - prize
 
-    if (pay < price) {
-        console.log('ราคา', price, 'จ่ายมา', pay, 'กรุณาจ่ายเพิ่มอีก', Math.abs(actualchange), ' บาท')
-    } else if (actualchange !== 0) {
-        for (let index = 0; index < arrallmoney.length; index++) {
-            let element = arrallmoney[index]; // 1000, 500, 100, 50, 20, 10, 5, 2, 1
-            // console.log(element)
-            let count = Math.floor(actualchange / element) // 668 / 500 = 1
-            // console.log(count) // 1
-            actualchange = actualchange - count * element //  668 - (500*1) = 168 // เอาตังทอนเก็บไว้ที่ตัวเอง
-            if (count > 0) {
-                arrnotes.push({
-                    จำนวนแบงค์: count, // Key: Value
-                    ประเภทแบงค์: element, // Key: Value
+    if (pay < prize) {
+        console.log(`Please pay more ${Math.abs(changeraw)}`)
+    } else if (pay > prize) {
+        console.log(`จ่ายมา ${pay} ราคา ${prize} ตังทอน ${changeraw}`)
+
+        for (let index = 0; index < allnotes.length; index++) {
+            let typeofnotes = allnotes[index];
+            // console.log(typeofnotes)
+
+            //หาจำนวนแบงค์
+            let findamouthofnotes = Math.floor(changeraw / typeofnotes)
+            // console.log(findamouthofnotes)
+
+            //เอาตังทอนมาวนหาเศษเพื่อเอาค่าไปเก็บที่ ตัวมันเอง และนำไปวนลูปด้านบนใหม่
+            changeraw = changeraw - typeofnotes * findamouthofnotes
+
+            if (findamouthofnotes > 0) {
+                allchanges.push({
+                    ประเภทแบงค์หรือเหรียญ: typeofnotes,
+                    จำนวนแบงค์หรือเหรียญ: findamouthofnotes,
                 })
             }
         }
-    }
+    } console.log(allchanges)
 
-    console.log(arrnotes)
 }
 
-
-drinkpayment(31, 1000)
+paymentmachine(42, 1000)
 // drinkpayment(49, 717)
 // drinkpayment(30, 31)

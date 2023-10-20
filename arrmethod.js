@@ -6,23 +6,39 @@
 // console.log(arrcatmapped)
 
 // let arrplus = [2, 1, 3, 4]
-// let arrplusmapped = arrplus.map(element => element + 9)
+// let arrplusmapped = arrplus.map(element => element % 2 === 0 ? element + 9 : element) // เพิ่มเงื่อนไข
 // console.log(arrplus)
 // console.log(arrplusmapped)
+
+// let arrplus2mapped = arrplus.map(element => {
+//     if (element % 2 === 0) {
+//         return element + 9
+//     } else { return element }
+// })
+// console.log(arrplus2mapped)
 
 // let arreven0 = [2, 4, 6, 8]
 
 // //เปรียบเทียบกับ forEach ด้านล่าง
 // let total0 = 0
 // let arrevensum0 = arreven0.map(element => total0 = total0 + element)
-// console.log(arrevensum0) // ทำเป็นอาเรย์ใหม่ให้เลย ต่างจาก forEach
+// console.log(arrevensum0) // ***ทำเป็นอาเรย์ใหม่ให้เลย ต่างจาก forEach
 
 //2. filter( ) This method creates a new array with only elements that passes the condition inside the provided function.  filter นั้นรับ array มาวนเหมือนกับ map แต่ว่าเราจะต้องมีการส่ง condition หรือเงื่อนไขว่าเราต้องการที่จะให้ return ค่าอะไรออกมา ซึ่ง filter ก็จะทำการสร้าง array ใหม่เช่นเดียวกัน ในด้าน Performance สำหรับการสร้างวนค่าทุกค่าใน Array แล้วเอา element ที่ตรงกับ condition ที่เราต้องการมาสร้าง Array ใหม่ .map ที่มี if สามารถทำงานได้เร็วกว่า .filter แต่สิ่งที่ควรคำนึงคือ ถ้าเราต้องการนำข้อมูลใน Array นี้ไปใช้เราก็จะต้องหาวิธีในการจะกำจัด undefined ซึ่งก็จะเพิ่มการทำงานให้หนักขึ้นไปอีก แต่ทั้งนี้ ด้วยความที่ทั้งคู่มัน return ค่าออกมา มันจึงสามารถเอาไป chain ให้มันทำงานต่อกันได้ครับ https://www.borntodev.com/2022/04/29/%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A-foreach-map-%E0%B9%81%E0%B8%A5%E0%B8%B0-filter/
 
 // let arraybeforefil = [9, 1, 8, 4, 6]
 // let arrayafterfil = arraybeforefil.filter(element => element % 3 === 0)
-// // console.log(arraybeforefil)
-// // console.log(arrayafterfil)
+// console.log(arraybeforefil)
+// console.log(arrayafterfil)
+// let arrayafterfilmorethan5 = arraybeforefil.filter(element => element > 5)
+// console.log(arrayafterfilmorethan5)
+
+// let arrayafterfilmorethan5 = arraybeforefil.filter(element => {
+//     if (element > 5) {
+//         return element
+//     }
+// })
+// console.log(arrayafterfilmorethan5)
 
 // let arraymatchs = arraybeforefil.filter(element => element === 4)
 // console.log(arraymatchs)
@@ -56,15 +72,19 @@
 // let namesortnormal = names.sort()
 // console.log(namesortnormal)
 
+// let names2 = [1, 2, 5, 6, 9, 11, 15]
+// let namesortnormal2 = names2.sort((a, b) => b - a)
+// console.log(namesortnormal2)
+
 // let namesortbylength = names.sort((a, b) => a.length - b.length) // น้อยไปมาก
 // console.log(namesortbylength)
 
 //6. forEach( )This method helps to loop over array by executing a provided callback function for each element in an array.เราสามารถใช้ .forEach เมื่อต้องการให้มีการทำงานอะไรบางอย่างในแต่ละค่าใน Array เช่น เราต้องการ console.log ทุก element ออกมา หรือวน element ใน Array เพื่อนำไปบันทึกลงใน Database ซึ่งไม่จำเป็นต้องเก็บ element ที่เราวนได้จาก Array นั้นไว้ครับ และด้วยความที่มันไม่ได้ return อะไรออกมา มันจึงไม่สามารถเอาไป chain ให้ทำงานต่อกันได้ครับ https://www.borntodev.com/2022/04/29/%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A-foreach-map-%E0%B9%81%E0%B8%A5%E0%B8%B0-filter/ แต่สิ่งที่น่าสนใจคือ ในด้าน Performance สำหรับการวนค่าทุกค่าใน Array เพื่อไปสร้างใน Array ใหม่ forEach กลับสามารถทำงานได้เร็วกว่า .map ครับ
 
 // let arreven = [2, 4, 6, 8]
-// arreven.forEach(element => {
-//     console.log(element * 10)
-// })
+// arreven.forEach((element, i, a) => {
+//     console.log(element, i, a) // value, index, array
+// }) // for loop
 
 //เปรียบเทียบกับ map ด้านบน
 // let total = 0
@@ -74,13 +94,16 @@
 // })
 
 
-//7. concat( ) This method is used to merge two or more arrays and returns a new array, without changing the existing arrays. เขียน JavaScript ต่อ array เข้าด้วยกัน ด้วยคำสั่ง concat ตัวอย่างแนะนำการใช้คำสั่ง concat สำหรับต่อ array 2 ตัวเข้าด้วยกัน บทความนี้แนะนำการต่อ array พร้อมกับแสดงผลลัพธ์จากการต่อ array ด้วยคำสั่ง console.log
+// 7. concat( ) This method is used to merge two or more arrays and returns a new array, without changing the existing arrays. เขียน JavaScript ต่อ array เข้าด้วยกัน ด้วยคำสั่ง concat ตัวอย่างแนะนำการใช้คำสั่ง concat สำหรับต่อ array 2 ตัวเข้าด้วยกัน บทความนี้แนะนำการต่อ array พร้อมกับแสดงผลลัพธ์จากการต่อ array ด้วยคำสั่ง console.log
 
 // let sentence01 = ['Yes', 'No', 'Ok']
 // let sentence02 = ['Maybe', 'Probably', 'Kind of']
 
 // let allsentence = sentence01.concat(sentence02)
 // console.log(allsentence)
+
+// let allsentence2 = [...sentence01, ...sentence02, ...allsentence]
+// console.log(allsentence2)
 
 //8.  every( )This method checks every element in the array that passes the condition, returning true or false as appropriate.  Methed จะช่วยให้เราสามารถ Check ทุกๆ Item ใน array โดยเราจะเป็นคนกําหนด Condition โดยถ้าผลออกมาเป็น true ทุก Item จะทําให้ every() return true แต่ถ้ามี Item อันใดอันหนึ่งเป็น false แล้ว every() จะ return false
 
@@ -111,16 +134,17 @@
 //10. includes() This method checks if an array includes the element that passes the condition, returning true or false as appropriate. Methed สําหรับ Check ว่าใน Array มี Item นี้อยู่หรือป่าว โดยจะ return ออกมาเป็น boolean  // includes JavaScript คือคำสั่งค้นหาข้อมูล ***โดยรองรับการค้นหาข้อมูลจาก string และค้นหาข้อมูลจาก array โดยคำสั่ง includes รับค่า parameter 1 ตัวคือข้อมูลที่ต้องการค้นหา และคืนค่าเป็น true และ false
 
 // let setofvarynum = [8, 1, 6, 7, 0, 4, 9, 3, 4, 5]
-// let checksomenum04 = setofvarynum.includes(0, 4)
+// let checksomenum04 = setofvarynum.includes(0, 5) // หาเลข 0 จากตำแหน่งที่ 5 เป็นต้นไป
 // console.log(checksomenum04)
 // let checksomenum2 = setofvarynum.includes(2)
 // console.log(checksomenum2)
 
-// let newsetofvarynum1 = [8, 4]
+// let newsetofvarynum1 = [4, 8]
 // for (let index = 0; index < setofvarynum.length; index++) {
 //     const element = newsetofvarynum1[index];
-//     let checkbothset1 = setofvarynum.includes(element)
-//     console.log(checkbothset1)
+//     console.log(element)
+//     let check = setofvarynum.includes(element)
+//     console.log(check)
 // }
 
 // let newsetofvarynum2 = 2
@@ -136,7 +160,7 @@
 // let checkMinny = wordstwo.includes(wordsminny)
 // console.log(checkMinny)
 
-//11.  join( ) This method returns a new string by concatenating all of the array’s elements separated by the specified separator.Methed สําหรับรวม Array ให้เป็น string โดยสามารถกําหนด separator ในการรวมได้
+//****11.  join( ) This method returns a new string by concatenating all of the array’s elements separated by the specified separator.Methed สําหรับรวม Array ให้เป็น string โดยสามารถกําหนด separator ในการรวมได้
 
 // Return String
 // const arr = ['c', 'a', 't']
@@ -152,18 +176,29 @@
 //12.  reduce( ) This method applies a function against an accumulator and each element in the array to reduce it to a single valueเราสามารถใช้ Methed ในการรวมข้อมูลใน array ได้ครับ หรือนําไปใช้ในแบบอื่นๆได้  https://www.borntodev.com/2022/05/06/reduce-%E0%B9%83%E0%B8%99-javascript/
 
 // let arr = [3, 4, 8, 6, 1, 5]
+// // ค่ากลาง, ในรอบนั้นๆ
+// // const arrreduce = arr.reduce((total, times) => total * times) // total default = 0 , times = current or arr
+// // console.log(arrreduce) // 3 * 4 * 8 * 6 * 1 * 5
 
-// const arrreduce = arr.reduce((total, times) => total * times) // total default = 0 , times = current or arr
-// console.log(arrreduce) // 3 * 4 * 8 * 6 * 1 * 5
+// let arrreduce2 = arr.reduce((total, times) => {
+//     total = total * times
+//     return total
+// }, 0) // 0 =กำหนดค่าให้ total หรือค่ากลาง
+// console.log(arrreduce2)
 
-// let arrcompare = [55, 45, 65, 75, 15]
-// let findmax = arrcompare.reduce(function (allarr, current) { return current > allarr ? current : allarr; })
+// let arrreducejoin = arr.reduce((total, times) => {
+//     total = total + times
+//     return total
+// }, '') // '' =กำหนดค่าให้ total หรือค่ากลาง
+// console.log(arrreducejoin)
+
+
+// let arrcompare = [55, 45, 65, 75, 15]    // ค่ากลาง, ปัจจุบัน เอาเทียบไปเรื่อยๆ และเก็บไว้ที่ค่ากลาง
+// let findmax = arrcompare.reduce(function (allarr, current) { return current < allarr ? current : allarr; })
 // // allarr หมายถึง ทั้งหมด, current คือค่าที่ต้องการหา
 // console.log(findmax)
 
 //สามารถใช้แทน Map และ Filter ได้นะ (เอาธรรมดาให้คล่องก่อนแล้วกัน)
-
-// let box = []
 
 // let arrreducefilter = [15, 35, 11, 17, 36, 27, 58, 65]
 // let findmodulo5 = arrreducefilter.reduce(function (allarr, element) {
@@ -176,7 +211,7 @@
 
 // let arr = [7, 4, 8, 72, 98, 4]
 
-// let arrmorethan50 = arr.find(element => element > 50)
+// let arrmorethan50 = arr.find(element => element > 50) // ต่างจาก index คืออันนี้หาค่าเลย
 // console.log(arrmorethan50) // result value
 
 
@@ -185,17 +220,17 @@
 // let arremtpy = [] // can not using with fill
 // let arremtpy2 = new Array(5) // gonna be only this format
 
-// // console.log(arremtpy2.fill('Lana', 4))
-// // console.log(arremtpy2.fill('Sara', 'Mac', 'Olive', 'Peter', 1))
-// // console.log(arremtpy2.fill(2))
-// // console.log(arremtpy2.fill(1, 'Dada'))
-// // console.log(arremtpy2.fill(0, 1)) // Array ที่ต้องการให้แทนที่, จำนวนที่ว่าง
-// // console.log(arremtpy.fill(0, 1)) // still empty
+// console.log(arremtpy2.fill('Lana', 4))
+// console.log(arremtpy2.fill('Sara', 'Mac', 'Olive', 'Peter', 1))
+// console.log(arremtpy2.fill(2))
+// console.log(arremtpy2.fill(1, 'Dada'))
+// console.log(arremtpy2.fill(0, 1)) // Array ที่ต้องการให้แทนที่, จำนวนที่ว่าง
+// console.log(arremtpy.fill(0, 1)) // still empty
 // console.log(arremtpy2.fill(8, 4)) // Array ที่ต้องการให้แทนที่, จำนวนที่ว่าง
 
 //15. slice()This method returns a new array with specified start to end elements. https://armshare.medium.com/%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B8%81%E0%B9%87%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87-slice-splice-%E0%B9%81%E0%B8%A5%E0%B8%B0-split-%E0%B9%80%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%87-%E0%B8%95%E0%B8%B1%E0%B8%94-%E0%B9%81%E0%B8%9A%E0%B9%88%E0%B8%87-%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99-b06dd9bd5966
 
-// slice() เริ่มตัวที่ n, ตัดถึงตัวที่ n ใช้กับ arr + string
+// slice() เริ่มตัวที่ n, ตัดถึงตัวที่ (ไม่เอา)n ใช้กับ arr + string
 // splice() เริ่มตัวที่ n, ตัดออก n ตัว ใช้กับ arr เท่านั้น
 // split() ใช้งานกับ string และจะ return ค่าที่เป็น array มาให้เราใช้งานต่อ ใช้กับ string เท่านั้น
 
@@ -227,9 +262,47 @@
 // console.log(arrpop)
 
 //19.shift( )This method removes the first element from an array and returns that element.
-// console.log(arr.shift()) *** ลบหน้า
+// console.log(arr.shift()) //*** ลบหน้า
 
 //20.unshift()This method adds one or more elements to the beginning of an array and returns the new length of the array.Methed นี้จะใช้ในการเพิ่มข้อมูลเข้าไปในส่วนแรกของ Array *** เพิ่มหน้า
 // arr.unshift(0)
 // console.log(arr)
 
+//ใช้บ่อยๆ
+
+// find, filter, map, pop, shift, unshift, push
+
+// Advance reduce
+
+const obj = [{
+    name: 'David',
+    age: 15,
+}, {
+    name: 'Rose',
+    age: 22,
+}, {
+    name: 'Micheal',
+    age: 88,
+}]
+
+let filterobj = obj.filter(e => {
+    if (e.age > 20) {
+        return e // return กลับไปให้ filterobj
+    }
+}).map(e => {
+    return e.name
+})
+
+console.log(filterobj) // ใช้บ่อยๆ
+
+//แนะนำให้เขียนเต็ม ก่อน
+
+let filterobj2 = obj.map(e => {
+    if (e.age > 20) {
+        return e.name
+    }// return กลับไปให้ filterobj
+}).filter(e => {
+    return e
+})
+
+console.log(filterobj2)

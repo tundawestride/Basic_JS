@@ -557,28 +557,7 @@
 // calwithtarget([2, 7, 11, 15], 9)
 // // calwithtarget([3, 2, 4], 6)
 
-//===== 9.2 สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด ประเภทเงินทอน[1, 2, 5, 10, 20, 50, 100, 500, 1000] input: เงินที่ต้องจ่าย, รับเงินที่ลูกค้าจ่าย output: เหรียญหรือแบงค์ที่ต้องทอน(60 คะแนน)
-// let coinone = { coin1: 'เหรียญ 1 บาท', amount: 0, pn: 'เหรียญ' }
-// let cointwo = { coin2: 'เหรียญ 2 บาท', amount: 0, pn: 'เหรียญ' }
-// let coinfive = { coin5: 'เหรียญ 5 บาท', amount: 0, pn: 'เหรียญ' }
-// let cointen = { coin10: 'เหรียญ 10 บาท', amount: 0, pn: 'เหรียญ' }
-// let notetwenty = { note20: 'แบงค์ 20 บาท', amount: 0, pn: 'แบงค์' }
-// let notefifty = { note50: 'แบงค์ 50 บาท', amount: 0, pn: 'แบงค์' }
-// let notehundred = { note100: 'แบงค์ 100 บาท', amount: 0, pn: 'แบงค์' }
-
-// let outputtext1 = 'ทอนด้วย'
-// let outputtext2 = 'จำนวน'
-
-// let coinone = 1
-// let cointwo = 2
-// let coinfive = 5
-// let cointen = 10
-// let notetwenty = 20
-// let notefifty = 50
-// let notehundred = 100
-// let notefivehun = 500
-// let notethousand = 1000
-
+//===== 9.2 สร้างฟังก์ชันสำหรับคำนวณตู้ขายน้ำ โดยต้องทอนให้ได้เหรียญหรือแบงค์น้อยที่สุด 
 let arrallmoney = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
 let arrnotes = []
 

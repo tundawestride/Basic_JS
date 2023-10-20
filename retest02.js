@@ -86,45 +86,45 @@
 
 //5. จัดกลุ่มตามคุณสมบัติ คำอธิบาย: ให้จัดกลุ่มอ็อบเจกต์ในอาร์เรย์ตามคุณสมบัติที่กำหนด ตัวอย่างข้อมูล: [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมหญิง", city: "เชียงใหม่"}, {name: "สมศรี", city: "กรุงเทพ"}], 'city' ผลลัพธ์: {"กรุงเทพ": [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมศรี", city: "กรุงเทพ"}], "เชียงใหม่": [{name: "สมหญิง", city: "เชียงใหม่"}]}
 
-let persondata = [{
-    name: "สมชาย",
-    city: "กรุงเทพ"
-}, {
-    name: "สมหญิง",
-    city: "เชียงใหม่"
-}, {
-    name: "สมศรี",
-    city: "กรุงเทพ"
-}]
+// let persondata = [{
+//     name: "สมชาย",
+//     city: "กรุงเทพ"
+// }, {
+//     name: "สมหญิง",
+//     city: "เชียงใหม่"
+// }, {
+//     name: "สมศรี",
+//     city: "กรุงเทพ"
+// }]
 
-let object1 = []
-let object2 = []
+// let object1 = []
+// let object2 = []
 
-let object = {
-    กรุงเทพ: object1,
-    เชียงใหม่: object2
-}
+// let object = {
+//     กรุงเทพ: object1,
+//     เชียงใหม่: object2
+// }
 
-function groupingbycity(persondata, city) {
-    // console.log(persondata)
+// function groupingbycity(persondata, city) {
+//     // console.log(persondata)
 
-    for (let index = 0; index < persondata.length; index++) {
-        const element = persondata[index];
-        // console.log(element)
-        // console.log(element.city)
+//     for (let index = 0; index < persondata.length; index++) {
+//         const element = persondata[index];
+//         // console.log(element)
+//         // console.log(element.city)
 
-        if (element.city === 'กรุงเทพ') {
-            object1.push(element)
-        } if (element.city === 'เชียงใหม่') {
-            object2.push(element)
-        }
-    }
+//         if (element.city === 'กรุงเทพ') {
+//             object1.push(element)
+//         } if (element.city === 'เชียงใหม่') {
+//             object2.push(element)
+//         }
+//     }
 
-    // console.log(object1)
-    // console.log(object2)
-    console.log(object)
-}
+//     // console.log(object1)
+//     // console.log(object2)
+//     console.log(object)
+// }
 
-groupingbycity(persondata)
+// groupingbycity(persondata)
 
 //

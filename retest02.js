@@ -14,16 +14,6 @@
 //         }
 //     } return console.log(duptwoarr)
 
-//     //find B in A
-//     // for (let indexx = 0; indexx < arrB.length; indexx++) {
-//     //     const elementB = arrB[indexx];
-//     //     // console.log(elementA)
-
-//     //     if (arrA.includes(elementB)) {
-//     //         console.log(elementB)
-//     //     }
-//     // }
-
 // }
 
 // findduparr([1, 2, 3, 4], [3, 4, 5, 6])
@@ -84,47 +74,50 @@
 
 // objectdatatostring(data)
 
-//5. จัดกลุ่มตามคุณสมบัติ คำอธิบาย: ให้จัดกลุ่มอ็อบเจกต์ในอาร์เรย์ตามคุณสมบัติที่กำหนด ตัวอย่างข้อมูล: [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมหญิง", city: "เชียงใหม่"}, {name: "สมศรี", city: "กรุงเทพ"}], 'city' ผลลัพธ์: {"กรุงเทพ": [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมศรี", city: "กรุงเทพ"}], "เชียงใหม่": [{name: "สมหญิง", city: "เชียงใหม่"}]}
+//*** Recheck 5. จัดกลุ่มตามคุณสมบัติ คำอธิบาย: ให้จัดกลุ่มอ็อบเจกต์ในอาร์เรย์ตามคุณสมบัติที่กำหนด ตัวอย่างข้อมูล: [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมหญิง", city: "เชียงใหม่"}, {name: "สมศรี", city: "กรุงเทพ"}], 'city' ผลลัพธ์: {"กรุงเทพ": [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมศรี", city: "กรุงเทพ"}], "เชียงใหม่": [{name: "สมหญิง", city: "เชียงใหม่"}]} // The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.ตัวดำเนินการ Nullish coalescing เป็นตัวดำเนินการที่ใช้เพื่อเลือกค่าระหว่างสองค่าหรือใช้สำหรับกำหนดค่าเริ่มต้นให้กับตัวแปร ในกรณีที่ค่านั้นเป็น null หรือ undefined ในการใช้งานตัวดำเนินการ Nullish coalescing (??) เพื่อเลือกค่าระหว่างสองค่าที่อยู่ทางด้านซ้ายและขวาของตัวดำเนินการ ถ้าหาก value1 มีค่าเป็น null หรือ undefined ผลลัพธ์ที่ได้จะเป็นค่าจากทางด้านขวา value2 แต่ถ้าหากไม่ใช่ผลลัพธ์ทีไ่ด้จะเป็นค่าจากตัวแปร value1 http://marcuscode.com/lang/javascript/operators-ii
 
-// let persondata = [{
-//     name: "สมชาย",
-//     city: "กรุงเทพ"
-// }, {
-//     name: "สมหญิง",
-//     city: "เชียงใหม่"
-// }, {
-//     name: "สมศรี",
-//     city: "กรุงเทพ"
-// }]
+let persondata = [{
+    name: "สมชาย",
+    city: "กรุงเทพ"
+}, {
+    name: "สมหญิง",
+    city: "เชียงใหม่"
+}, {
+    name: "สมศรี",
+    city: "กรุงเทพ"
+}]
 
-// let object1 = []
-// let object2 = []
+let result = {}
 
-// let object = {
-//     กรุงเทพ: object1,
-//     เชียงใหม่: object2
-// }
+function findbyprovice(persondata) {
 
-// function groupingbycity(persondata, city) {
-//     // console.log(persondata)
+    persondata.forEach(element => {
+        // console.log(element)
+        // เช็คบรรทัดที่ 90 ว่ามีกรุงเทพไหม
+        if (result[element.city]) {
+            result[element.city] = [...result[element.city], element] // เก็บกรุงเทพ และรายละเอียด element เหมือน Push
+        } else { result[element.city] = [element] } // ถ้าไม่มีคือค่าเริ่มต้น
 
-//     for (let index = 0; index < persondata.length; index++) {
-//         const element = persondata[index];
-//         // console.log(element)
-//         // console.log(element.city)
+    });
 
-//         if (element.city === 'กรุงเทพ') {
-//             object1.push(element)
-//         } if (element.city === 'เชียงใหม่') {
-//             object2.push(element)
-//         }
-//     }
+    // // กำหนด ค่ากลาง และลูป
+    // let groupbyprovince = persondata.reduce((g, persondata) => {
+    //     let { city } = persondata; // เลือกค่าที่จะจัดกลุ่ม
+    //     // console.log({ city })
+    //     // console.log(persondata)
 
-//     // console.log(object1)
-//     // console.log(object2)
-//     console.log(object)
-// }
+    //     g[city] = g[city] ?? [];
+    //     //เลือกค่าระหว่างสองค่า โดยกำหนดค่าให้ค่ากลาง g[city] เก็บเลือกระหว่างด้านซ้ายและขวาของตัวดำเนินการ Nullish coalescing (??) ถ้าหาก value1 มีค่าเป็น null หรือ undefined ผลลัพธ์ที่ได้จะเป็นค่าจากทางด้านขวาหรือ value2 แต่ถ้าหากไม่ใช่ผลลัพธ์ทีไ่ด้จะเป็นค่าจากตัวแปร value1 ในกรณีนี้คือเก็บ value1
 
-// groupingbycity(persondata)
+    //     g[city].push(persondata);
+    //     //
+    //     return g;
+    // }, {});
 
-//
+    // console.log(groupbyprovince)
+
+    console.log(result)
+}
+
+findbyprovice(persondata)
+

@@ -26,26 +26,37 @@
 function sortsumtwodimenarr(arr) {
 
     arr.forEach(element => {
-        // console.log(element)
-        let sum = element.reduce((total, current) => {
-            return total + current
-        }, 0)
-        console.log(`element = ${element}, sum = ${sum}`)
+        console.log(element)
+        //     let sum = element.reduce((total, current) => {
+        //         return total + current
+        //     }, 0)
+        //     console.log(`element = ${element}, sum = ${sum}`)
+        // หากจะเอามา sort จะต้องกำหนดรายละเอียดให้กับ a ด้วย
 
-        console.log(arr.sort((a, b) => a.sum - b.sum))
+        //a.sum กับ b.sum จะใช้ไม่ได้ ต้องเอา reduce กำหนดให้ a ตรงๆ เช่น a.reduce ตามด้านล่าง
+    })
 
-    });
+    console.log(arr.sort((a, b) => a.reduce((total, current) => {
+        return total + current
+    }, 0) - b.reduce((total, current) => { return total + current })))
+
 }
 
+// // sortsumtwodimenarr([1, 2, 3, 4, 2])
+// sortsumtwodimenarr([[1, 2, 3], [4], [2, 3]])
+// // // sortsumtwodimenarr([[5, 5, 5, 5, 5], [5, 5, 5], [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]])
 
-// แบบ สั้น เอาผลรวมมาเรียงกัน
-// return console.log(arr.sort((a, b) => a.reduce((total, current) => { return total + current }, 0) - b.reduce((total, current) => { return total + current })))
 
+// เพิ่มเติมการ sort
+
+// let arrnumber = [2, 9, 4, 5, 8, 1, 4, 7]
+// let arralphabet = ['f', 'h', 'd', 'e', 's', 'v']
+
+// function sorttest(arralphabet) {
+//     console.log(arralphabet.sort((a, b) => a.localeCompare(b)))
 // }
+// sorttest(arralphabet)
 
-// sortsumtwodimenarr([1, 2, 3, 4, 2])
-sortsumtwodimenarr([[1, 2, 3], [4], [2, 3]])
-// // sortsumtwodimenarr([[5, 5, 5, 5, 5], [5, 5, 5], [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]])
 
 //***3. ตรวจสอบความเท่ากันของอาร์เรย์ซ้อน คำอธิบาย: ให้เขียนฟังก์ชันเพื่อตรวจสอบว่าอาร์เรย์สองอันมีความยาวเท่ากันหรือไม่ ตัวอย่างข้อมูล: [[1, 2], [3, 4]] , [[1, 2], [3, 4]] ผลลัพธ์: true
 

@@ -76,6 +76,33 @@
 
 //*** Recheck 5. จัดกลุ่มตามคุณสมบัติ คำอธิบาย: ให้จัดกลุ่มอ็อบเจกต์ในอาร์เรย์ตามคุณสมบัติที่กำหนด ตัวอย่างข้อมูล: [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมหญิง", city: "เชียงใหม่"}, {name: "สมศรี", city: "กรุงเทพ"}], 'city' ผลลัพธ์: {"กรุงเทพ": [{name: "สมชาย", city: "กรุงเทพ"}, {name: "สมศรี", city: "กรุงเทพ"}], "เชียงใหม่": [{name: "สมหญิง", city: "เชียงใหม่"}]} // The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.ตัวดำเนินการ Nullish coalescing เป็นตัวดำเนินการที่ใช้เพื่อเลือกค่าระหว่างสองค่าหรือใช้สำหรับกำหนดค่าเริ่มต้นให้กับตัวแปร ในกรณีที่ค่านั้นเป็น null หรือ undefined ในการใช้งานตัวดำเนินการ Nullish coalescing (??) เพื่อเลือกค่าระหว่างสองค่าที่อยู่ทางด้านซ้ายและขวาของตัวดำเนินการ ถ้าหาก value1 มีค่าเป็น null หรือ undefined ผลลัพธ์ที่ได้จะเป็นค่าจากทางด้านขวา value2 แต่ถ้าหากไม่ใช่ผลลัพธ์ทีไ่ด้จะเป็นค่าจากตัวแปร value1 http://marcuscode.com/lang/javascript/operators-ii
 
+// let persondata = [{
+//     name: "สมชาย",
+//     city: "กรุงเทพ"
+// }, {
+//     name: "สมหญิง",
+//     city: "เชียงใหม่"
+// }, {
+//     name: "สมศรี",
+//     city: "กรุงเทพ"
+// }]
+// let result = {}
+// function findbyprovice(persondata) {
+//     persondata.forEach(element => {
+//         // console.log(element)
+//         // console.log([element.city])
+//         // console.log(result)
+
+//         if (result[element.city]) { // ถ้ามีเมืองนั้น อยู่แล้ว ให้ Push element ลงไป
+//             result[element.city] = [...result[element.city], element]
+//         } else { result[element.city] = [element] } // แต่ถ้าไม่มีให้นำมาเก็บไว้เป็นค่าเริ่มต้น
+
+//     });
+//     console.log(result)
+// }
+
+
+
 let persondata = [{
     name: "สมชาย",
     city: "กรุงเทพ"
@@ -87,37 +114,24 @@ let persondata = [{
     city: "กรุงเทพ"
 }]
 
-let result = {}
-
 function findbyprovice(persondata) {
 
-    persondata.forEach(element => {
-        // console.log(element)
-        // เช็คบรรทัดที่ 90 ว่ามีกรุงเทพไหม
-        if (result[element.city]) {
-            result[element.city] = [...result[element.city], element] // เก็บกรุงเทพ และรายละเอียด element เหมือน Push
-        } else { result[element.city] = [element] } // ถ้าไม่มีคือค่าเริ่มต้น
+    // กำหนด ค่ากลาง และลูป
+    let groupbyprovince = persondata.reduce((g, persondata) => {
+        let { city } = persondata; // เลือกค่าที่จะจัดกลุ่ม
+        // console.log({ city })
+        // console.log(persondata)
 
-    });
+        g[city] = g[city] ?? [];
+        //เลือกค่าระหว่างสองค่า โดยกำหนดค่าให้ค่ากลาง g[city] เก็บเลือกระหว่างด้านซ้ายและขวาของตัวดำเนินการ Nullish coalescing (??) ถ้าหาก value1 มีค่าเป็น null หรือ undefined ผลลัพธ์ที่ได้จะเป็นค่าจากทางด้านขวาหรือ value2 แต่ถ้าหากไม่ใช่ผลลัพธ์ทีไ่ด้จะเป็นค่าจากตัวแปร value1 ในกรณีนี้คือเก็บ value1
 
-    // // กำหนด ค่ากลาง และลูป
-    // let groupbyprovince = persondata.reduce((g, persondata) => {
-    //     let { city } = persondata; // เลือกค่าที่จะจัดกลุ่ม
-    //     // console.log({ city })
-    //     // console.log(persondata)
+        g[city].push(persondata);
+        //
+        return g;
+    }, {});
 
-    //     g[city] = g[city] ?? [];
-    //     //เลือกค่าระหว่างสองค่า โดยกำหนดค่าให้ค่ากลาง g[city] เก็บเลือกระหว่างด้านซ้ายและขวาของตัวดำเนินการ Nullish coalescing (??) ถ้าหาก value1 มีค่าเป็น null หรือ undefined ผลลัพธ์ที่ได้จะเป็นค่าจากทางด้านขวาหรือ value2 แต่ถ้าหากไม่ใช่ผลลัพธ์ทีไ่ด้จะเป็นค่าจากตัวแปร value1 ในกรณีนี้คือเก็บ value1
-
-    //     g[city].push(persondata);
-    //     //
-    //     return g;
-    // }, {});
-
-    // console.log(groupbyprovince)
-
-    console.log(result)
+    console.log(groupbyprovince)
 }
 
-findbyprovice(persondata)
 
+findbyprovice(persondata)

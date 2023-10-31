@@ -1,92 +1,92 @@
-let student = {
-    name: "Alice",
-    age: 23,
-    major: "information technology",
-    GPA: 3.78
-}
+// let student = {
+//     name: "Alice",
+//     age: 23,
+//     major: "information technology",
+//     GPA: 3.78
+// }
 
-let student2 = {}
-console.log(student2);
-student2.name = "Bom"
-student2['age'] = 22
-console.log(student2);
-console.log(student2.name);
-console.log(student2['age']);
+// let student2 = {}
+// console.log(student2);
+// student2.name = "Bom"
+// student2['age'] = 22
+// console.log(student2);
+// console.log(student2.name);
+// console.log(student2['age']);
 
-// // // let name = student.name
-// // // let age = student.age
-// // // let major = student.major
-// // // let gpa = student.GPA
-let { name, age, major, GPA } = student
-console.log(name, age, major, GPA);
+// // // // let name = student.name
+// // // // let age = student.age
+// // // // let major = student.major
+// // // // let gpa = student.GPA
+// let { name, age, major, GPA } = student
+// console.log(name, age, major, GPA);
 
-// // Object Assign
+// // // Object Assign
 
-let info = {
-    admission: "20/06/2020",
-    gradute: "09/03/2022"
-}
+// let info = {
+//     admission: "20/06/2020",
+//     gradute: "09/03/2022"
+// }
 
-Object.assign(student, info)
-console.log(student);
+// Object.assign(student, info)
+// console.log(student);
 
-// List all keys in objects
-console.log(Object.keys(student))
+// // List all keys in objects
+// console.log(Object.keys(student))
 
-// List all value
-console.log(Object.values(student))
+// // List all value
+// console.log(Object.values(student))
 
-// /// Objects in Arrays
-// // Objects contains student info
+// // /// Objects in Arrays
+// // // Objects contains student info
 
-let studentInfo = [
-    { // index 1
-        name: "Alice",
-        age: 23,
-        major: "information technology",
-        GPA: 3.78
-    },
-    { // index 2
+// let studentInfo = [
+//     { // index 1
+//         name: "Alice",
+//         age: 23,
+//         major: "information technology",
+//         GPA: 3.78
+//     },
+//     { // index 2
 
-        name: "Sara",
-        age: 25,
-        major: "Food Sciences",
-        GPA: 3.50
-    },
-    { // index 3
+//         name: "Sara",
+//         age: 25,
+//         major: "Food Sciences",
+//         GPA: 3.50
+//     },
+//     { // index 3
 
-        name: "Gabriel",
-        age: 19,
-        major: "English",
-        GPA: 2.4
-    },
+//         name: "Gabriel",
+//         age: 19,
+//         major: "English",
+//         GPA: 2.4
+//     },
 
-]
+// ]
 
-for (let i = 0; i < studentInfo.length; i++) { // can using index or i, any dummy
+// for (let i = 0; i < studentInfo.length; i++) { // can using index or i, any dummy
 
-    console.log(studentInfo[i]);
+//     console.log(studentInfo[i]);
 
-    if (studentInfo[i].GPA > 2.5) {
-        console.log("Pass");
-    } else {
-        console.log("Not pass");
-    }
-}
+//     if (studentInfo[i].GPA > 2.5) {
+//         console.log("Pass");
+//     } else {
+//         console.log("Not pass");
+//     }
+// }
 
-//===================================
+// //===================================
 
-let word = "Okmemmo"
-let cll = word.length
-console.log(cll)
+// let word = "Okmemmo"
+// let cll = word.length
+// console.log(cll)
 
-//====================================
+// //====================================
 
-function checkmaxCharacters(word) {
-    let cl = word.length
-    console.log(cl)
-}
-checkmaxCharacters('stirfryrice')
+// function checkmaxCharacters(word) {
+//     let cl = word.length
+//     console.log(cl)
+// }
+// checkmaxCharacters('stirfryrice')
 
 //====================================
 
@@ -154,10 +154,10 @@ let checkbox = []
 function maxCharacters(allkeys) {
     for (let i = 0; i < allkeys.length; i++) {
         let keys = allkeys[i]; // seperate each keys
-        // console.log(keys)
+        console.log(keys)
 
-        // Storage      checking box      picking each name by keys
-        check = checkbox.find((eachkey) => eachkey.name == keys)
+        // Storage      checking box find=first    picking each name by keys
+        let check = checkbox.find((eachkey) => eachkey.name == keys)
 
         // push eachkey in checkbox if never been in box
         if (check == undefined) {
